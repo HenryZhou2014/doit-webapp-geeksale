@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.zeroturnaround.com" xsi:schemaLocation="http://www.zeroturnaround.com http://www.zeroturnaround.com/alderaan/rebel-2_0.xsd">
+
+	<classpath>
+		<dir name="d:\projects\2017.geek-sale\svn\source\trunk\geek-sale-app\doit-webapp-geeksale\target\classes\">
+		</dir>
+		<dir name="d:\projects\2017.geek-sale\svn\source\trunk\geek-sale-app\doit-webapp-geeksale\target\test-classes\">
+		</dir>
+	</classpath>
+
+	<web>
+		<link target="/">
+			<dir name="d:\projects\2017.geek-sale\svn\source\trunk\geek-sale-app\doit-webapp-geeksale\target\doit-webapp-geeksale-1.0-SNAPSHOT\">
+			</dir>
+		</link>
+	</web>
+
+</application>

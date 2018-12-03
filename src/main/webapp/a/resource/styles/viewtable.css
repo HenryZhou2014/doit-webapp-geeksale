@@ -1,0 +1,22 @@
+.td05{
+    max-width: 50px;
+}
+.td10{
+    max-width: 100px;
+}
+.td15{
+    max-width: 150px;
+}
+.td20{
+    max-width: 200px;
+}
+.td25{
+    max-width: 250px;
+}
+.td30{
+    max-width: 300px;
+}
+
+.common label{
+    font-weight: 100;
+}

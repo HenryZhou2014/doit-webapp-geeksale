@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MenuConfig>
+    <Displayers>
+        <Displayer name="Velocity" type="net.sf.navigator.displayer.VelocityMenuDisplayer"/>
+    </Displayers>
+    <Menus>
+
+        <Menu name="SystemAdminMenu" title="system.menu.admin" description="system admin menu" roles="ROLE_USER" width="80">
+            <Item name="DepartmentAdmin" title="system.menu.department" page="/admin/departments"/>
+            <Item name="RoleAdmin" title="system.menu.role" page="/admin/roles"/>
+            <Item name="UserAdmin" title="system.menu.user" page="/admin/users"/>
+            <!--<Item name="LogView" title="system.menu.log" page="/admin/accessLogs">
+                <Item name="AccessLogView" title="system.menu.accesslog" page="/admin/accessLogs"/>
+                <Item name="OperateLogView" title="system.menu.operatelog" page="/admin/operateLogs"/>
+                <Item name="SystemLogView" title="system.menu.systemlog" page="/admin/systemLogs"/>
+            </Item>
+            <Item name="ParameterAdmin" title="system.menu.parameter" page="/admin/parameters"/>-->
+        </Menu>
+
+        <Menu name="UserTopMenu" title="user.menu.admin" description="user admin menu" roles="ROLE_USER" width="80">
+            <Item name="UserAddressbookAdmin" title="user.menu.addressbook" page="/user/addressBooks"/>
+            <Item name="UserMessageAdmin" title="user.menu.message" page="/user/messageInboxs"/>
+            <Item name="UserAgendaAdmin" title="user.menu.agenda" page="/user/agendas"/>
+            <Item name="UserAdmin" title="user.menu.user" page="/user/userform"/>
+            <Item name="UserTodoAdmin" title="user.menu.todo" page="/user/todoes"/>
+            <Item name="NotificationView" title="user.menu.notification" page="/user/notifications"/>
+            <!--<Item name="OptionAdmin" title="user.menu.option" page="/user/settings"/>-->
+            <Item name="ActiveUserView" title="user.menu.active.user" page="/user/activeUsers"/>
+            <Item name="ActiveUserView" title="user.menu.active.user" page="/user/activeUsers"/>
+        </Menu>
+
+        <Menu name="UserPanelMenu" title="user.menu.admin" description="user admin menu" roles="ROLE_USER" width="80">
+            <Item name="UserAddressbookAdmin" title="user.menu.addressbook" page="/user/addressBooks"/>
+            <Item name="UserMessageAdmin" title="user.menu.message" page="/user/messageInboxs">
+                <Item name="UserMessageInbox" title="user.menu.messageinbox" page="/user/messageInboxs"/>
+                <Item name="UserMessageOutbox" title="user.menu.messageoutbox" page="/user/messageOutboxs"/>
+            </Item>
+            <Item name="UserAgendaAdmin" title="user.menu.agenda" page="/user/agendas"/>
+            <Item name="UserAdmin" title="user.menu.user" page="/user/userform"/>
+            <Item name="UserTodoAdmin" title="user.menu.todo" page="/user/todoes"/>
+            <Item name="NotificationView" title="user.menu.notification" page="/user/notifications"/>
+            <!--<Item name="OptionAdmin" title="user.menu.option" page="/user/settings"/>-->
+            <Item name="ActiveUserView" title="user.menu.active.user" page="/user/activeUsers"/>
+        </Menu>
+
+        <Menu name="WorkMenu" title="work.menu.admin" description="work admin menu" roles="ROLE_USER" width="80">
+            <Item name="MessageAdmin" title="work.menu.message" page="/office/messageInboxs"/>
+            <Item name="DocumentAdmin" title="work.menu.document" page="/office/documents"/>
+            <Item name="AddressbookAdmin" title="work.menu.addressbook" page="/office/addressBooks"/>
+            <Item name="TodoAdmin" title="work.menu.todo" page="/office/todoes"/>
+            <Item name="AgendaAdmin" title="work.menu.agenda" page="/office/agendas"/>
+        </Menu>
+
+        <Menu name="DocumentPanelMenu" title="document.menu.admin" description="document menu" roles="ROLE_USER" width="80">
+            <Item name="DocumentMenu" title="document.menu.admin" page="/documents"/>
+        </Menu>
+
+        <Menu name="WorkPanelMenu" title="work.menu.admin" description="work admin menu" roles="ROLE_USER" width="80">
+            <Item name="MessageAdmin" title="work.menu.message" page="/office/messageInboxs"/>
+            <Item name="DocumentAdmin" title="work.menu.document" page="/office/documents"/>
+            <Item name="AddressbookAdmin" title="work.menu.addressbook" page="/office/addressBooks"/>
+            <Item name="TodoAdmin" title="work.menu.todo" page="/office/todoes"/>
+            <Item name="AgendaAdmin" title="work.menu.agenda" page="/office/agendas"/>
+        </Menu>
+
+        <Menu name="DocumentMenu" title="document.menu.admin" roles="ROLE_USER" page="/documents"/>
+
+        <Menu name="MainMenu" title="mainMenu.title" page="/mainMenu" roles="ROLE_USER"/>
+        <Menu name="TopMenuUser" title="user.menu.admin" roles="ROLE_USER" page="/user/todoes"/>
+        <Menu name="TopMenuOffice" title="work.menu.admin" roles="ROLE_USER" page="/office/messageInboxs"/>
+        <Menu name="TopMenuDocument" title="document.menu.admin" roles="ROLE_USER" page="/documents"/>
+        <Menu name="TopMenuSystem" title="system.menu.admin" roles="ROLE_USER" page="/admin/users"/>
+
+        <Menu name="Logout" title="user.logout" page="/logout" roles="ROLE_ADMIN,ROLE_USER"/>
+
+    </Menus>
+
+</MenuConfig>

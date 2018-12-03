@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="TaskComments" xmlns="http://jbpm.org/4.4/jpdl">
+
+  <start g="20,20,48,48" name="start">
+      <transition to="node" name="to_node"/>
+  </start>
+
+    <state name="node">
+        <transition to="end" name="to_end"/>
+    </state>
+
+    <end name="end"/>
+
+</process>

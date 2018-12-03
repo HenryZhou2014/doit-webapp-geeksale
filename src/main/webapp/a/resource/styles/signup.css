@@ -1,0 +1,36 @@
+.tabtitle{
+    padding: 10px;
+    border-top:solid 1px indianred;
+    margin:15px 5px 5px 5px;
+    color:red;
+}
+.tabtitle a{
+    float: right;
+}
+
+.note em{
+    color: #ff0000;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+.fullwidth{
+    width: 100%;
+}
+.text-left{
+    text-align: left !important;
+}
+
+.valid-error-input{
+    background: url("../scripts/jquery-validation/images/error.png") right center no-repeat;
+}
+input.error{
+    background: url("../scripts/jquery-validation/images/error.png") right center no-repeat;
+}
+input.valid{
+    background: url("../scripts/jquery-validation/images/sucess.png") right center no-repeat;
+}
+.valid-success-input{
+    background: url("../scripts/jquery-validation/images/sucess.png") right center no-repeat;
+}
+label b{font-family:"????";margin-right:5px;color: red}

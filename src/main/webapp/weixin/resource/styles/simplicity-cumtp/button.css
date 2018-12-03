@@ -1,0 +1,189 @@
+/* A CSS Framework by Mike Stenhouse of Content with Style */
+
+.button_login{
+    height: 46px;
+    width: 80px;
+    /*background: -moz-linear-gradient(center top , rgba(92, 165, 239, 0.9), rgba(4, 60, 90, 0.9) 80%, rgba(4, 60, 90, 0.9)) repeat scroll 0 0 transparent;*/
+    /*border: 1px solid #1E7EB1;*/
+    /*color: #FFFFFF;*/
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.button_delete{
+}
+
+.button_delete span{
+    background: transparent url(./images/icon/1354589887_Trash_16x16.png) no-repeat;
+    padding: 2px 2px 2px 16px;
+    height: 20px;
+}
+
+.button_enable{
+}
+
+.button_enable span{
+    background: transparent url(./images/icon/1354588055_unlock_green.png) no-repeat;
+    padding: 2px 2px 2px 16px;
+    height: 20px;
+}
+
+.button_disable{
+}
+
+.button_disable span{
+    background: transparent url(./images/icon/1354588088_lock_yellow.png) no-repeat;
+    padding: 2px 2px 2px 16px;
+    height: 20px;
+}
+
+.button_select{
+}
+
+.button_select span{
+    background: transparent url(./images/icon/1354588729_checkbox_checked.png) no-repeat;
+    padding: 2px 2px 2px 16px;
+    height: 20px;
+}
+
+.button_diselect{
+}
+
+.button_diselect span{
+    background: transparent url(./images/icon/1355035116_checkbox_unchecked.png) no-repeat;
+    padding: 2px 2px 2px 16px;
+    height: 20px;
+}
+
+.button_query{
+    background-color: #eee;
+    padding: 5px;
+}
+
+.button_query span{
+    background: transparent url(./images/icon/1354589108_old-edit-find.png) 0 50% no-repeat;
+    padding: 5px 2px 2px 16px;
+    height: 20px;
+    font-weight: bold;
+}
+
+.button_return{
+     background: transparent url(./images/icon/arrow-return.png) no-repeat;
+     padding: 2px 2px 2px 16px;
+     height: 20px;
+ }
+.button_return span{
+    /*background: transparent url(./images/icon/1354589887_Trash_16x16.png) no-repeat;*/
+    /*padding: 2px 2px 2px 16px;*/
+    /*height: 20px;*/
+}
+
+.button_edit{
+    background: transparent url(./images/icon/16x16_file_edit.png) no-repeat;
+    padding: 2px 2px 2px 16px;
+    height: 20px;
+}
+.button_edit span{
+    /*background: transparent url(./images/icon/1354589887_Trash_16x16.png) no-repeat;*/
+    /*padding: 2px 2px 2px 16px;*/
+    /*height: 20px;*/
+}
+
+.publishStatus{
+    background: url("images/icon-16-publish.png") 0 0 no-repeat;
+    height: 16px;
+    padding-left: 16px;
+}
+
+.unpublishStatus{
+    background: url("images/icon-16-publish.png") 0 100% no-repeat;
+    height: 16px;
+    padding-left: 16px;
+}
+
+.icon_table_button_view{
+
+}
+
+.icon_table_button_view img{
+    width: 20px;
+    height: 20px;
+}
+
+.icon_table_button_edit{
+
+}
+
+.icon_table_button_edit img{
+    width: 20px;
+    height: 20px;
+}
+
+.icon_table_button_delete{
+
+}
+
+.icon_table_button_delete img{
+    width: 20px;
+    height: 20px;
+}
+
+.form_button_save{
+    line-height: 25px;
+    background: #eeeeee;
+    padding: 5px 10px;
+    color: darkgray;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.form_button_save:hover{
+    background: #54B547;
+    color: darkgreen;
+}
+
+.form_button_new{
+    line-height: 25px;
+    background: #eeeeee;
+    padding: 5px 10px;
+    color: darkgray;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.form_button_new:hover{
+    background: #54B547;
+    color: darkgreen;
+}
+
+.form_button_close{
+    line-height: 25px;
+    background: #eeeeee;
+    padding: 5px 10px;
+    color: darkgray;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.form_button_close:hover{
+    background: #F1593A;
+    color: darkred;
+}
+
+.form_button_search{
+    line-height: 26px;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    font-weight: bold;
+    background: #eeeeee;
+    border:1px solid #aaaaaa;
+    border-radius: 5px;
+}
+
+.form_button_search:hover{
+    color: #444444;
+    background: #cccccc;
+}

@@ -1,0 +1,223 @@
+/* A CSS Framework by Mike Stenhouse of Content with Style */
+.hidden, .hidden li{
+    display: none;
+    visibility: hidden;
+}
+#sub{
+    /*border: 1px solid #74B3DC;*/
+    /*background-color: #F7F9FC;*/
+}
+#sub .menubar{
+    list-style-type: none;
+}
+
+#sub>.menubar>a{
+    display: block;
+    height: 25px;
+    font-size: 16px;
+    padding-top: 8px;
+    padding-left: 10px;
+    font-weight: bold;
+    text-align: left;
+    background-color: #0072C6;
+    vertical-align: middle;
+    color: #FFFFFF;
+}
+#sub>.menubar>ul{
+    padding: 0;
+    margin: 0;
+}
+#sub>.menubar>ul>li>a{
+    /*text-align: center;*/
+    padding-left: 35px;
+    display: block;
+    font-size: 14px;
+    height: 20px;
+    padding-top: 5px;
+    color: #013665;
+    /*padding: 0;*/
+    /*margin: 0;*/
+}
+
+.menubar li{
+    /*border-bottom: 1px solid #0072C6;*/
+}
+
+#sub>.menubar>ul>li>a:hover{
+    background: #0072C6;
+    border-radius: 5px;
+    color: #EEEEEE;
+    font-weight: bold;
+}
+
+#sub>.menubar>ul>li>ul{
+    padding: 0;
+    margin: 0;
+}
+#sub>.menubar>ul>li>ul li{
+    /*border-bottom: 1px solid #0072C6;*/
+}
+#sub>.menubar>ul>li>ul a{
+    /*text-align: center;*/
+    /*margin-left: 60px;*/
+    font-size: 12px;
+    padding-top: 5px;
+    padding-left: 55px;
+    color: #013665;
+    display: block;
+    height: 20px;
+    /*background: red;*/
+    /*padding: 0;*/
+    /*margin: 0;*/
+
+}
+#sub>.menubar>ul>li>ul a:hover{
+    background: #0072C6;
+    border-radius: 5px;
+    color: #EEEEEE;
+    font-weight: bold;
+}
+
+#mainBody{
+    border: 1px solid #eee;
+    /*clear: both;*/
+    padding: 0;
+    margin: 0;
+}
+
+.navBar{
+    border:1px solid #eee;
+    padding: 5px 0;
+    margin-bottom: 5px;
+    /*height: 15px;*/
+}
+
+.toolbar{
+    /*padding: 5px;*/
+    /*vertical-align: middle;
+    height: 25px;*/
+    border:1px solid #ddd;
+    background: #eee;
+}
+
+.dataArea{
+    float:left;
+    clear:right;
+    width:100%;
+}
+
+.dataTables_scroll{
+    border: 1px solid #eee;
+}
+
+.dataTables_scrollHeadInner{
+    background-color: #D3D3D3;
+}
+
+.topSeperate{
+    border-top: 1px dotted #aaaaaa;
+}
+
+.block{
+    display: block;
+    width:100%;
+}
+
+.right{
+    text-align: right;
+}
+
+.queryParams{
+
+}
+
+.queryParams li{
+    list-style: none;
+    float: left;
+    margin-right: 10px;
+}
+
+.clear{
+    clear: both;
+}
+
+.clearLeft{
+    clear: left;
+}
+
+.clearRight{
+    clear: right;
+}
+
+label.title{
+    border: 0 none;
+    color: #444444;
+    /*display: block;*/
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.3em;
+    margin: 4px 0 3px;
+}
+
+a.button span{
+    float: left;
+}
+
+.dataAreaSeperator{
+    /*margin-top: 10px;*/
+    margin: 10px 35px 10px 35px;
+    /*margin-bottom: 10px;*/
+    border-top: 1px solid #e78f08;
+}
+
+.branding a{
+    color:#000; background:#333; font:bold 24px/2 "΢���ź�",Arial;
+    text-indent:2em;
+    text-shadow:black 2px 2px 2px;
+}
+
+#loginPanel label{
+    font-size: 14px;
+}
+
+.navigateDiv{
+    padding: 5px 0px 5px 10px;
+    font-size: 12px;
+    /*border: 1px solid #0072C6;*/
+    background: #eeeeee;
+}
+
+.DetailInfoTable01{
+
+}
+
+.DetailInfoTable01 tr.even{
+
+}
+
+.DetailInfoTable01 tr.odd{
+
+}
+
+.DetailInfoTable01 td{
+    padding: 5px 10px;
+}
+
+.show{
+    display: block;
+    visibility: visible;
+}
+
+.poweredInfo{
+    font-size: 12px;
+    margin-top: 50px;
+    color: #ffffff;
+}
+
+.poweredInfo a{
+    color: #ffffff;
+}
+
+.poweredInfo a:hover{
+    color: darkred;
+}

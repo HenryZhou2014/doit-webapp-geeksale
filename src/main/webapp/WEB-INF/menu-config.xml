@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MenuConfig>
+    <Displayers>
+        <Displayer name="Velocity" type="net.sf.navigator.displayer.VelocityMenuDisplayer"/>
+    </Displayers>
+    <Menus>
+
+        <Menu name="SystemAdminMenu" title="system.menu.admin" description="system admin menu" width="80">
+            <Item name="DepartmentAdmin" title="system.menu.department" page="/admin/departments"/>
+            <Item name="RoleAdmin" title="system.menu.role" page="/admin/roles"/>
+            <Item name="UserAdmin" title="system.menu.user" page="/admin/users"/>
+            <Item name="LogView" title="system.menu.log" page="/admin/accessLogs">
+                <Item name="AccessLogView" title="system.menu.accesslog" page="/admin/accessLogs"/>
+                <Item name="OperateLogView" title="system.menu.operatelog" page="/admin/operateLogs"/>
+                <Item name="SystemLogView" title="system.menu.systemlog" page="/admin/systemLogs"/>
+            </Item>
+            <Item name="ParameterAdmin" title="system.menu.parameter" page="/admin/parameters"/>
+        </Menu>
+
+        <Menu name="UserTopMenu" title="user.menu.admin" description="user admin menu" width="80">
+            <Item name="UserAddressbookAdmin" title="user.menu.addressbook" page="/user/addressBooks"/>
+            <Item name="UserMessageAdmin" title="user.menu.message" page="/user/messageInboxs"/>
+            <Item name="UserAgendaAdmin" title="user.menu.agenda" page="/user/agendas"/>
+            <Item name="UserAdmin" title="user.menu.user" page="/user/userform"/>
+            <Item name="UserTodoAdmin" title="user.menu.todo" page="/user/todoes"/>
+            <Item name="NotificationView" title="user.menu.notification" page="/user/notifications"/>
+            <!--<Item name="OptionAdmin" title="user.menu.option" page="/user/settings"/>-->
+            <Item name="ActiveUserView" title="user.menu.active.user" page="/user/activeUsers"/>
+            <Item name="ActiveUserView" title="user.menu.active.user" page="/user/activeUsers"/>
+        </Menu>
+
+        <Menu name="UserPanelMenu" title="user.menu.admin" description="user admin menu" width="80">
+            <Item name="UserAddressbookAdmin" title="user.menu.addressbook" page="/user/addressBooks"/>
+            <Item name="UserSendNewMessage" title="user.menu.newmessage" page="/user/messageOutboxform"/>
+            <Item name="UserMessageAdmin" title="user.menu.message" page="/user/messageInboxs">
+                <Item name="UserMessageInbox" title="user.menu.messageinbox" page="/user/messageInboxs"/>
+                <Item name="UserMessageOutbox" title="user.menu.messageoutbox" page="/user/messageOutboxs"/>
+            </Item>
+            <Item name="UserAgendaAdmin" title="user.menu.agenda" page="/user/agendas"/>
+            <Item name="UserAdmin" title="user.menu.user" page="/user/userform"/>
+            <Item name="UserTodoAdmin" title="user.menu.todo" page="/user/todoes"/>
+            <Item name="NotificationView" title="user.menu.notification" page="/user/notifications"/>
+            <!--<Item name="OptionAdmin" title="user.menu.option" page="/user/settings"/>-->
+            <!--<Item name="ActiveUserView" title="user.menu.active.user" page="/user/activeUsers"/>-->
+        </Menu>
+
+        <Menu name="WorkMenu" title="work.menu.admin" description="work admin menu" width="80">
+            <Item name="MessageAdmin" title="work.menu.message" page="/office/messageInboxs"/>
+            <Item name="DocumentAdmin" title="work.menu.document" page="/office/documents"/>
+            <Item name="AddressbookAdmin" title="work.menu.addressbook" page="/office/addressBooks"/>
+            <Item name="TodoAdmin" title="work.menu.todo" page="/office/todoes"/>
+            <Item name="AgendaAdmin" title="work.menu.agenda" page="/office/agendas"/>
+        </Menu>
+
+        <Menu name="DocumentPanelMenu" title="document.menu.admin" description="document menu" width="80">
+            <Item name="DocumentMenu" title="document.menu.admin" page="/documents"/>
+        </Menu>
+
+        <Menu name="WorkPanelMenu" title="work.menu.admin" description="work admin menu" width="80">
+            <Item name="MessageAdmin" title="work.menu.message" page="/office/messageInboxs"/>
+            <Item name="DocumentAdmin" title="work.menu.document" page="/office/documents"/>
+            <Item name="AddressbookAdmin" title="work.menu.addressbook" page="/office/addressBooks"/>
+            <Item name="TodoAdmin" title="work.menu.todo" page="/office/todoes"/>
+            <Item name="AgendaAdmin" title="work.menu.agenda" page="/office/agendas"/>
+        </Menu>
+
+        <Menu name="DocumentMenu" title="document.menu.admin" page="/documents"/>
+
+        <Menu name="MainMenu" title="首页" page="/mainMenu"/>
+
+        <Menu name="BudgetMenu" title="预算管理" description="work admin menu" width="80">
+            <Item name="MessageAdmin" title="预算申报" page="/office/messageInboxs"/>
+            <Item name="DocumentAdmin" title="预算查询" page="/office/documents"/>
+            <Item name="AddressbookAdmin" title="预算编制" page="/office/addressBooks"/>
+            <Item name="TodoAdmin" title="预算分配" page="/office/todoes"/>
+            <Item name="AgendaAdmin" title="付款计划申报" page="/office/agendas"/>
+            <Item name="AgendaAdmin" title="付款计划查询" page="/office/agendas"/>
+        </Menu>
+
+        <Menu name="ContractMenu" title="合同管理" description="work admin menu" width="80">
+            <Item name="MessageAdmin" title="合同申报" page="/office/messageInboxs"/>
+            <Item name="DocumentAdmin" title="合同查询" page="/office/documents"/>
+            <Item name="AddressbookAdmin" title="合同管理" page="/office/addressBooks"/>
+            <Item name="TodoAdmin" title="合同审批" page="/office/todoes"/>
+        </Menu>
+
+        <Menu name="PaymentMenu" title="付款管理" description="work admin menu" width="80">
+            <Item name="MessageAdmin" title="付款申报" page="/office/messageInboxs"/>
+            <Item name="DocumentAdmin" title="小额付款申报" page="/office/documents"/>
+            <Item name="AddressbookAdmin" title="付款查询" page="/office/addressBooks"/>
+            <Item name="TodoAdmin" title="付款管理" page="/office/todoes"/>
+            <Item name="TodoAdmin" title="付款审批" page="/office/todoes"/>
+            <Item name="TodoAdmin" title="付款确认" page="/office/todoes"/>
+        </Menu>
+
+        <Menu name="ReceivingMenu" title="收款管理" description="work admin menu" width="80">
+            <Item name="MessageAdmin" title="收款登记" page="/office/messageInboxs"/>
+            <Item name="DocumentAdmin" title="收款查询" page="/office/documents"/>
+            <Item name="AddressbookAdmin" title="付款管理" page="/office/addressBooks"/>
+        </Menu>
+
+        <Menu name="MaterialMenu" title="物料管理" description="work admin menu" width="80">
+            <Item name="MessageAdmin" title="收款登记" page="/office/messageInboxs"/>
+            <Item name="DocumentAdmin" title="收款查询" page="/office/documents"/>
+            <Item name="AddressbookAdmin" title="付款管理" page="/office/addressBooks"/>
+        </Menu>
+
+        <Menu name="ExtraProjectMenu" title="特别项目管理" description="work admin menu" width="80">
+            <Item name="MessageAdmin" title="收款登记" page="/office/messageInboxs"/>
+            <Item name="DocumentAdmin" title="收款查询" page="/office/documents"/>
+            <Item name="AddressbookAdmin" title="付款管理" page="/office/addressBooks"/>
+        </Menu>
+
+
+        <Menu name="TopMenuUser" title="user.menu.admin" page="/user/todoes"/>
+        <Menu name="TopMenuOffice" title="work.menu.admin" page="/office/messageInboxs"/>
+        <Menu name="TopMenuDocument" title="document.menu.admin" page="/documents"/>
+        <Menu name="TopMenuSystem" title="system.menu.admin" page="/admin/users"/>
+        <Menu name="TopBudgetMenu" title="预算管理" page="/budget/contract/contracts"/>
+        <Menu name="TopContractMenu" title="合同管理" page="/budget/contract/contracts"/>
+        <Menu name="TopPaymentMenu" title="付款管理" page="/budget/contract/contracts"/>
+        <Menu name="TopReceivingMenu" title="收款管理" page="/budget/contract/contracts"/>
+        <Menu name="TopMaterialMenu" title="物料管理" page="/budget/contract/contracts"/>
+        <Menu name="TopExtraProjectMenu" title="特别项目管理" page="/budget/contract/contracts"/>
+
+        <Menu name="Logout" title="user.logout" page="/logout" />
+
+        <!--BudgetPayment-START-->
+        <Menu name="BudgetPaymentMenu" title="budgetPaymentList.title" page="/budgetPayments"/>
+        <!--BudgetPayment-END-->
+        <!--BudgetContract-START-->
+        <Menu name="BudgetContractMenu" title="budgetContractList.title" page="/budgetContracts"/>
+        <!--BudgetContract-END-->
+        <!--BudgetProfile-START-->
+        <Menu name="BudgetProfileMenu" title="budgetProfileList.title" page="/budgetProfiles"/>
+        <!--BudgetProfile-END-->
+        <!--BudgetIncome-START-->
+        <Menu name="BudgetIncomeMenu" title="budgetIncomeList.title" page="/budgetIncomes"/>
+        <!--BudgetIncome-END-->
+        <!--BudgetSubject-START-->
+        <Menu name="BudgetSubjectMenu" title="budgetSubjectList.title" page="/budgetSubjects"/>
+        <!--BudgetSubject-END-->
+        <!--BudgetProject-START-->
+        <Menu name="BudgetProjectMenu" title="budgetProjectList.title" page="/budgetProjects"/>
+        <!--BudgetProject-END-->
+        <!--BudgetSubjectClass-START-->
+        <Menu name="BudgetSubjectClassMenu" title="budgetSubjectClassList.title" page="/budgetSubjectClasses"/>
+        <!--BudgetSubjectClass-END-->
+        <!--Account-START-->
+        <Menu name="AccountMenu" title="accountList.title" page="/accounts"/>
+        <!--Account-END-->
+        <!--CompanyInfo-START-->
+        <Menu name="CompanyInfoMenu" title="companyInfoList.title" page="/companyInfoes"/>
+        <!--CompanyInfo-END-->
+        <!--WebLink-START-->
+        <Menu name="WebLinkMenu" title="webLinkList.title" page="/webLinks"/>
+        <!--WebLink-END-->
+        <!--Article-START-->
+        <Menu name="ArticleMenu" title="articleList.title" page="/articles"/>
+        <!--Article-END-->
+        
+        <!--ArticleCategory-START-->
+        <Menu name="ArticleCategoryMenu" title="articleCategoryList.title" page="/articleCategories"/>
+        <!--ArticleCategory-END-->
+        <!--SellOffer-START-->
+        <Menu name="SellOfferMenu" title="sellOfferList.title" page="/sellOffers"/>
+        <!--SellOffer-END-->
+        <!--BuyOffer-START-->
+        <Menu name="BuyOfferMenu" title="buyOfferList.title" page="/buyOffers"/>
+        <!--BuyOffer-END-->
+        <!--ProductIndustry-START-->
+        <Menu name="ProductIndustryMenu" title="productIndustryList.title" page="/productIndustries"/>
+        <!--ProductIndustry-END-->
+        <!--ProductBrand-START-->
+        <Menu name="ProductBrandMenu" title="productBrandList.title" page="/productBrands"/>
+        <!--ProductBrand-END-->
+        <!--ProductCategory-START-->
+        <Menu name="ProductCategoryMenu" title="productCategoryList.title" page="/productCategories"/>
+        <!--ProductCategory-END-->
+        <!--FarmGoodsQuotation-START-->
+        <Menu name="FarmGoodsQuotationMenu" title="farmGoodsQuotationList.title" page="/farmGoodsQuotations"/>
+        <!--FarmGoodsQuotation-END-->
+        <!--FoodSecurityTest-START-->
+        <Menu name="FoodSecurityTestMenu" title="foodSecurityTestList.title" page="/foodSecurityTests"/>
+        <!--FoodSecurityTest-END-->
+        <!--NamedTextModule-START-->
+        <Menu name="NamedTextModuleMenu" title="namedTextModuleList.title" page="/namedTextModules"/>
+        <!--NamedTextModule-END-->
+        <!--CompanyInfoExt-START-->
+        <Menu name="CompanyInfoExtMenu" title="companyInfoExtList.title" page="/companyInfoExts"/>
+        <!--CompanyInfoExt-END-->
+        <!--AdPosition-START-->
+        <Menu name="AdPositionMenu" title="adPositionList.title" page="/adPositions"/>
+        <!--AdPosition-END-->
+        <!--AdCast-START-->
+        <Menu name="AdCastMenu" title="adCastList.title" page="/adCasts"/>
+        <!--AdCast-END-->
+        <!--AdVisit-START-->
+        <Menu name="AdVisitMenu" title="adVisitList.title" page="/adVisits"/>
+        <!--AdVisit-END-->
+        <!--AdVisitHistory-START-->
+        <Menu name="AdVisitHistoryMenu" title="adVisitHistoryList.title" page="/adVisitHistories"/>
+        <!--AdVisitHistory-END-->
+        <!--CategoryProperty-START-->
+        <Menu name="CategoryPropertyMenu" title="categoryPropertyList.title" page="/categoryProperties"/>
+        <!--CategoryProperty-END-->
+        <!--OfferProperty-START-->
+        <Menu name="OfferPropertyMenu" title="offerPropertyList.title" page="/offerProperties"/>
+        <!--OfferProperty-END-->
+        <!--Cart-START-->
+        <Menu name="CartMenu" title="cartList.title" page="/carts"/>
+        <!--Cart-END-->
+        <!--CartProduct-START-->
+        <Menu name="CartProductMenu" title="cartProductList.title" page="/cartProducts"/>
+        <!--CartProduct-END-->
+        <!--GoodsOrder-START-->
+        <Menu name="GoodsOrderMenu" title="goodsOrderList.title" page="/goodsOrders"/>
+        <!--GoodsOrder-END-->
+        <!--GoodsOrderProduct-START-->
+        <Menu name="GoodsOrderProductMenu" title="goodsOrderProductList.title" page="/goodsOrderProducts"/>
+        <!--GoodsOrderProduct-END-->
+    </Menus>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</MenuConfig>

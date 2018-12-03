@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Founder State="true" Message="">
+    <document>
+        <resource>
+            <metadata name="type">基本信息</metadata>
+            <metadata name="contentType">PRODUCT/BOOK</metadata>
+            <metadata name="SYS_DOCUMENTID" trans="唯一标识">1967216</metadata>
+            <metadata name="SYS_TOPIC" trans="书名">寻求灵魂的现代人（Loft）</metadata>
+            <metadata name="ISBN" trans="ISBN">9787532771141.B417</metadata>
+            <metadata name="MATERIAL_ID" trans="物料号">2015-00185</metadata>
+            <metadata name="SERIES_NAME" trans="丛书名"/>
+            <metadata name="PRESS_NAME" trans="出版社">上海译文出版社</metadata>
+            <metadata name="BOOK_CAT" trans="出版社分类" catcode="E" catid="81047">上海译文出版社</metadata>
+            <metadata name="CLC_CAT" trans="中图法分类" catcode="B6" catid="89616">大洋洲哲学</metadata>
+            <metadata name="WEBSITE_CAT" trans="营销分类" catid="0"/>
+            <metadata name="LANGUAGE" trans="语种">汉文</metadata>
+            <metadata name="EDITOR" trans="责任编辑"/>
+            <metadata name="COPY_DESIGNER" trans="版式设计"/>
+            <metadata name="SYS_AUTHORS" trans="作者">[瑞士]卡尔·古斯塔夫·荣格著 黄奇铭译</metadata>
+            <metadata name="COVER_DESIGNER" trans="封面设计"/>
+            <metadata name="MAJOR_EDITOR" trans="主编"/>
+            <metadata name="TRANSLATOR" trans="翻译/译者"/>
+            <metadata name="PRINT_VERSION" trans="印次">1</metadata>
+            <metadata name="BOOK_VERSION" trans="版次">1</metadata>
+            <metadata name="PUBDATE" trans="出版时间">2016-07-12</metadata>
+            <metadata name="TEXT_NUM" trans="页数">320</metadata>
+            <metadata name="PRICE" trans="定价">45.0</metadata>
+            <metadata name="READER_OBJECT" trans="读者对象"/>
+            <metadata name="SHELF_ADVICE" trans="上架建议"/>
+            <metadata name="FORMAT" trans="开本">小32开</metadata>
+            <metadata name="PRODUCT_SIZE" trans="成品尺寸"/>
+            <metadata name="TEXT_TYPE" trans="正文用纸"/>
+            <metadata name="TEXT_COLOR" trans="正文色数"/>
+            <metadata name="TEXT_SOFT" trans="正文排版软件"/>
+            <metadata name="COVER_SOFT" trans="封面排版软件"/>
+            <metadata name="FLAT_PLATE" trans="排版公司"/>
+            <metadata name="SUPPORT_PRODUCT" trans="配套产品"/>
+            <metadata name="DEPART" trans="分社/部门" catcode="E" catid="140245">上海译文出版社</metadata>
+            <metadata name="KEYWORDS" trans="关键词"/>
+            <metadata name="REMARK" trans="备注"/>
+            <metadata name="CIPINFO" trans="海外POD"/>
+            <metadata name="LEGALNOTICE" trans="一本印"/>
+            <metadata name="CHKCIRCS" trans="苹果ibooks电子书"/>
+            <metadata name="CHKREMARK" trans="epub电子书"/>
+            <metadata name="BSN" trans="二维码">9787532771141</metadata>
+            <metadata name="BARCODE" trans="xml资源"/>
+        </resource>
+        <resource>
+            <metadata name="type">精编信息</metadata>
+            <metadata name="contentType">简介</metadata>
+            <metadata name="SYS_TOPIC">简介</metadata>
+            <metadata name="SYS_AUTHORS"/>
+            <metadata name="CONTENT"><![CDATA[<div>&nbsp; <span style="white-space: normal; text-transform: none; word-spacing: 0px; float: none; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; display: inline !important; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">人类灵魂的探索者荣格，是关心现代人生活的精神分析大师。在现代人精神上遭遇幻灭与痛苦，以及心理疾病等诸多问题上，他都有着精辟独到的见解，并善于运用丰富的想象力作出深入浅出的分析。</span><br style="white-space: normal; text-transform: none; word-spacing: 0px; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" />
+<span style="white-space: normal; text-transform: none; word-spacing: 0px; float: none; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; display: inline !important; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;在本书中，荣格从精神分析学派赖以建立理论大厦的基本手段&mdash;&mdash;梦的解析出发，论述了分析心理学的各个问题：由梦的解析论及无意识、由人生的各阶段论及与弗洛伊德的根本分歧、由集体无意识论及宗教文艺等社会生活各个领域的问题。</span><br style="white-space: normal; text-transform: none; word-spacing: 0px; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" />
+<span style="white-space: normal; text-transform: none; word-spacing: 0px; float: none; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; display: inline !important; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp;&nbsp;想要了解心理分析的真谛、拯救自身灵魂的现代人，都应该阅读这本名著。</span></div>]]></metadata>
+        </resource>
+        <resource>
+            <metadata name="type">精编信息</metadata>
+            <metadata name="contentType">目录</metadata>
+            <metadata name="SYS_TOPIC">目录</metadata>
+            <metadata name="SYS_AUTHORS"/>
+            <metadata name="CONTENT"><![CDATA[<div>&nbsp; <span style="white-space: normal; text-transform: none; word-spacing: 0px; float: none; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; display: inline !important; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">译序</span><br style="white-space: normal; text-transform: none; word-spacing: 0px; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" />
+<span style="white-space: normal; text-transform: none; word-spacing: 0px; float: none; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; display: inline !important; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">荣格的生平与心理分析学</span><br style="white-space: normal; text-transform: none; word-spacing: 0px; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" />
+<span style="white-space: normal; text-transform: none; word-spacing: 0px; float: none; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; display: inline !important; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">英译者贝恩斯序</span><br style="white-space: normal; text-transform: none; word-spacing: 0px; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" />
+<span style="white-space: normal; text-transform: none; word-spacing: 0px; float: none; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; display: inline !important; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">梦的分析之实际应用</span><br style="white-space: normal; text-transform: none; word-spacing: 0px; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" />
+<span style="white-space: normal; text-transform: none; word-spacing: 0px; float: none; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; display: inline !important; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">现代心理治疗的问题</span><br style="white-space: normal; text-transform: none; word-spacing: 0px; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" />
+<span style="white-space: normal; text-transform: none; word-spacing: 0px; float: none; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; display: inline !important; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">心理治疗的目标</span><br style="white-space: normal; text-transform: none; word-spacing: 0px; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" />
+<span style="white-space: normal; text-transform: none; word-spacing: 0px; float: none; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; display: inline !important; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">心理学的类型理论</span><br style="white-space: normal; text-transform: none; word-spacing: 0px; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" />
+<span style="white-space: normal; text-transform: none; word-spacing: 0px; float: none; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; display: inline !important; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">人生的各阶段</span><br style="white-space: normal; text-transform: none; word-spacing: 0px; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" />
+<span style="white-space: normal; text-transform: none; word-spacing: 0px; float: none; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; display: inline !important; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">论弗洛伊德与荣格之异同</span><br style="white-space: normal; text-transform: none; word-spacing: 0px; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" />
+<span style="white-space: normal; text-transform: none; word-spacing: 0px; float: none; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; display: inline !important; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">古代人</span><br style="white-space: normal; text-transform: none; word-spacing: 0px; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" />
+<span style="white-space: normal; text-transform: none; word-spacing: 0px; float: none; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; display: inline !important; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">心理学与文学</span><br style="white-space: normal; text-transform: none; word-spacing: 0px; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" />
+<span style="white-space: normal; text-transform: none; word-spacing: 0px; float: none; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; display: inline !important; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">分析心理学的基本假定</span><br style="white-space: normal; text-transform: none; word-spacing: 0px; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" />
+<span style="white-space: normal; text-transform: none; word-spacing: 0px; float: none; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; display: inline !important; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">现代人的心理问题</span><br style="white-space: normal; text-transform: none; word-spacing: 0px; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" />
+<span style="white-space: normal; text-transform: none; word-spacing: 0px; float: none; color: rgb(64,64,64); font: 12px/18px 宋体; orphans: 2; widows: 2; display: inline !important; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">心理治疗医生与牧师</span></div>]]></metadata>
+        </resource>
+        <resource>
+            <metadata name="type">精编信息</metadata>
+            <metadata name="contentType">作者简介</metadata>
+            <metadata name="SYS_TOPIC">作者简介</metadata>
+            <metadata name="SYS_AUTHORS"/>
+            <metadata name="CONTENT">
+                <![CDATA[<div>&nbsp;&nbsp;<a style="white-space: normal; text-transform: none; word-spacing: 0px; color: rgb(51,51,51); text-align: left; font: 12px/18px 宋体; text-decoration: none; margin: 0px; orphans: 2; widows: 2; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" href="http://www.ewen.com.cn/books/zuozhejj.aspx?authorname=('w09071')" target="_blank"><span id="author_jj_label" style="padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; padding-right: 0px">&nbsp;卡尔&middot;古斯塔夫&middot;荣格（Carl&nbsp;G.Jung，1875-1961），出生于瑞士北部的康斯坦斯湖畔，1961年逝世。他是瑞士著名的精神科医生，分析心理学的创始人，毕生致力于人类灵魂及其深处奥秘的探索，对研究人类的意识心理做出了巨大贡献。</span></a></div>]]></metadata>
+        </resource>
+        <resource>
+            <metadata name="type">附件信息</metadata>
+            <metadata name="contentType">lowqualitypdf</metadata>
+            <metadata name="PATH">attach/低精度PDF/寻求灵魂的现代人（Loft）_低精度.pdf</metadata>
+            <metadata name="SYS_TOPIC">寻求灵魂的现代人（Loft）_低精度.pdf</metadata>
+        </resource>
+        <resource>
+            <metadata name="type">相关资源</metadata>
+            <metadata name="contentType">relation/COVER-PIC</metadata>
+            <metadata name="SYS_DOCUMENTID" trans="唯一标识">1968024</metadata>
+            <metadata name="SYS_TOPIC" trans="图片名称">fm.jpg</metadata>
+            <metadata name="原图">relation//fm.jpg</metadata>
+            <metadata name="中图">relation/1258073_m.jpg</metadata>
+            <metadata name="小图">relation/1258073_s.jpg</metadata>
+        </resource>
+    </document>
+</Founder>

@@ -1,0 +1,56 @@
+.tabtitle{
+    padding: 10px;
+    /*border-top:solid 2px indianred;*/
+    margin:15px 5px 5px 5px;
+    color:red;
+}
+.apadding{
+    padding:0 10px;
+    margin-right: 5px;
+}
+.tabtitle a , a.right{
+    float: right;
+}
+
+.apadding0{
+    padding-left: 0;
+}
+
+.validMsg{
+    padding-left: 0;
+    line-height: 34px;
+}
+
+.apaddingRight{
+    padding-right: 10px;
+}
+
+form{
+    margin-top:10px ;
+    /*border-bottom: solid 2px indianred;*/
+}
+.form-group{
+    margin-top: 20px;
+}
+
+.fullwidth{
+    width: 100%;
+}
+
+.validError,.errorMsg{
+    color: #ff0000;
+    background: url('/scripts/jquery-validation/images/error.png') no-repeat left center;
+    padding-left: 20px;
+}
+.validError{
+    padding-top: 7px;
+}
+.errorMsg{
+    height: 30px;
+    visibility: hidden;
+}
+.validSuccess{
+    padding-top: 7px;
+    background: url('/scripts/jquery-validation/images/sucess.png') no-repeat left center;
+    padding-left:20px ;
+}

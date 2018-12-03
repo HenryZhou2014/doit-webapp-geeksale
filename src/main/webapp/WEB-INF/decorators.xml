@@ -1,0 +1,60 @@
+<decorators defaultdir="/a/decorators">
+    <excludes>
+        <pattern>/40*.jsp</pattern>
+        <pattern>/*ajax=true*</pattern>
+        <pattern>/scripts/dojo/*</pattern>
+        <pattern>/struts/dojo/*</pattern> 
+        <pattern>/resources/*</pattern>
+        <pattern>/login*</pattern>
+        <pattern>/signup*</pattern>
+        <pattern>/backend/login*</pattern>
+        <pattern>/app/backend/login*</pattern>
+        <pattern>/signup*</pattern>
+        <pattern>/json/*</pattern>
+        <pattern>/backend/json/*</pattern>
+        <pattern>/backend/ebookpreview/*</pattern>
+        <pattern>/app/backend/ebookpreview/*</pattern>
+        <pattern>/*.json</pattern>
+        <pattern>/*.ajax</pattern>
+        <pattern>/ajax/*</pattern>
+        <pattern>/backend/ajax/*</pattern>
+        <pattern>/general/*</pattern>
+        <pattern>/perfect/*</pattern>
+        <pattern>/website/module/*</pattern>
+        <pattern>/cms/module/*</pattern>
+        <!--<pattern>/user/*</pattern>-->
+        <pattern>/*ueditor*</pattern>
+        <pattern>/ueditor/config*</pattern>
+        <pattern>/config/ueditor*</pattern>
+        <pattern>/panel/*</pattern>
+        <pattern>/api/*</pattern>
+        <pattern>/backend/panel/*</pattern>
+        <pattern>/app/backend/panel/*</pattern>
+        <pattern>/payment/alipay/*</pattern>
+        <pattern>/app/payment/alipay/*</pattern>
+        <pattern>/app/ebook*</pattern>
+    </excludes>
+
+    <!--后台管理-->
+    <decorator name="backend" page="/b/decorates/default.jsp">
+        <pattern>/backend/*</pattern>
+        <pattern>/app/backend/*</pattern>
+        <pattern>/app/backend</pattern>
+    </decorator>
+
+    <decorator name="agent" page="/a/decorates/default-agent.jsp">
+        <pattern>/agent</pattern>
+        <pattern>/agent/</pattern>
+        <pattern>/agent/*</pattern>
+        <pattern>/app/agent</pattern>
+        <pattern>/app/agent/</pattern>
+        <pattern>/app/agent/*</pattern>
+    </decorator>
+
+    <decorator name="default" page="/a/decorates/default.jsp">
+        <pattern>/*</pattern>
+        <pattern>/app/*</pattern>
+        <pattern>/app</pattern>
+        <pattern>/app/</pattern>
+    </decorator>
+</decorators>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="ArticlePublishProcess" xmlns="http://jbpm.org/4.4/jpdl">
+
+    <start name="start">
+        <transition to="主编审批"/>
+    </start>
+    <task name="主编审批" assignee="iueywe">
+        <transition to="总编审批"/>
+    </task>
+    <task name="总编审批" assignee="liuling">
+        <transition to="结束"/>
+    </task>
+    <end name="结束"/>
+</process>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans xmlns="http://www.springframework.org/schema/security"
+         xmlns:b="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <http security="none" pattern="/images/**"/>
+    <http security="none" pattern="/styles/**"/>
+    <http security="none" pattern="/scripts/**"/>
+    <http security="none" pattern="/ueditor/**"/>
+
+    <http security="none" pattern="/login**"/>
+    <http security="none" pattern="/backend/login**"/>
+    <http security="none" pattern="/backend/login/**"/>
+    <http security="none" pattern="/logout/**"/>
+    <http security="none" pattern="/backend/logout/**"/>
+    <http security="none" pattern="/signup/**"/>
+    <http security="none" pattern="/general/**"/>
+    <http security="none" pattern="/api/**"/>
+    <http security="none" pattern="/app/general/**"/>
+    <http security="none" pattern="/a/resource/styles/**"/>
+    <http security="none" pattern="/a/resource/scripts/**"/>
+    <http security="none" pattern="/a/resource/images/**"/>
+    <http security="none" pattern="/b/resource/common/styles/**"/>
+    <http security="none" pattern="/b/resource/common/scripts/**"/>
+    <http security="none" pattern="/b/resource/images/**"/>
+    <http security="none" pattern="/b/resource/theme/**"/>
+    <http security="none" pattern="/agent/**"/>
+    <http security="none" pattern="/app/agent/**"/>
+    <http security="none" pattern="/sms/all"/>
+    <http security="none" pattern="/usercenter/sms"/>
+    <!--后台管理-->
+    <http pattern="/backend/**" authentication-manager-ref="backendAuthManager" entry-point-ref="loginUrlEntryPoint"
+          use-expressions="true">
+        <!--<intercept-url pattern="/backend/**" access="ROLE_ADMIN,ROLE_USER,ROLE_DEVELOPER"/>-->
+        <intercept-url pattern="/backend/index" access="hasAnyRole('ROLE_ADMIN','ROLE_MANAGER')"/>
+        <intercept-url pattern="/backend/**" access="hasAnyRole('ROLE_ADMIN','ROLE_MANAGER')"/>
+        <form-login login-page="/backend/login" authentication-success-handler-ref="adminAuthenticationSuccessHandler"
+                    authentication-failure-url="/backend/login?error=true" always-use-default-target="true"
+                    default-target-url="index" login-processing-url="/backend/j_security_check"/>
+        <!--<logout logout-success-url="/backend/login"  logout-url="/backend/logout" />-->
+        <remember-me user-service-ref="managerAccountDao" key="e37f4b31-0c45-11dd-bd0b-0800200c9a67"/>
+    </http>
+
+    <http auto-config="false" entry-point-ref="multiwayAuthenticationEntryPoint" use-expressions="true">
+        <intercept-url pattern="/checkout**" access="isAuthenticated()"/>
+        <intercept-url pattern="/usercenter/**" access="hasAnyRole('ROLE_AGENT', 'ROLE_MEMBER','ROLE_ADMIN')"/>
+        <!--<intercept-url pattern="/backend/login**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>-->
+
+        <intercept-url pattern="/backend/**" access="hasAnyRole('ROLE_ADMIN','ROLE_MANAGER')"/>
+        <intercept-url pattern="/**" access="permitAll()"/>
+
+        <!-- 登录过滤器 -->
+        <custom-filter before="FORM_LOGIN_FILTER" ref="loginFilter"/>
+
+        <!-- ajax登录过滤器 -->
+        <custom-filter position="FORM_LOGIN_FILTER" ref="ajaxLoginFilter"/>
+
+        <!-- 只cache get,避免ajax post 被cache -->
+        <request-cache ref="httpSessionRequestCache"/>
+
+        <!-- 登录过滤器 -->
+        <!--<custom-filter before="FORM_LOGIN_FILTER" ref="loginFilter"/>-->
+        <!--<custom-filter position="FORM_LOGIN_FILTER" ref="backendLoginFilter"/>-->
+
+        <!-- 注销过滤器 -->
+        <!--<custom-filter before="LOGOUT_FILTER" ref="logoutFilter"/>-->
+        <!--<custom-filter position="LOGOUT_FILTER" ref="backendLogoutFilter"/>-->
+
+        <logout logout-url="/j_spring_security_logout" logout-success-url="/login"/>
+
+        <remember-me user-service-ref="accountDao" key="e37f4b31-0c45-11dd-bd0b-0800200c9a66"/>
+
+        <session-management invalid-session-url="/index">
+            <concurrency-control max-sessions="1" error-if-maximum-exceeded="true"/>
+        </session-management>
+    </http>
+
+    <b:bean id="multiwayAuthenticationEntryPoint" class="com.doit.xiaowanjia.authentication.MultiwayAuthenticationEntryPoint">
+        <b:property name="loginFormUrl" value="/login" />
+    </b:bean>
+
+    <b:bean id="adminAuthenticationSuccessHandler"
+            class="com.doit.xiaowanjia.authentication.AdminAuthenticationSuccessHandler">
+        <b:property name="defaultTargetUrl" value="index"></b:property>
+        <b:property name="forwardToDestination" value="true"></b:property>
+        <!--<b:property name="targetUrlParameter" value="targetUrl"></b:property>-->
+    </b:bean>
+
+    <b:bean id="authenticationFailureHandler" class="com.doit.xiaowanjia.authentication.AuthenticationFailureHandler">
+        <b:property name="defaultTargetUrl" value="index"></b:property>
+        <b:property name="forwardToDestination" value="true"></b:property>
+        <!--<b:property name="targetUrlParameter" value="targetUrl"></b:property>-->
+    </b:bean>
+
+    <!-- 验证普通用户 -->
+    <b:bean id="loginFilter" class="org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter">
+        <b:property name="authenticationManager" ref="authenticationManager"/>
+        <b:property name="authenticationFailureHandler" ref="failureHandler"/>
+        <b:property name="authenticationSuccessHandler" ref="successHandler"/>
+        <b:property name="filterProcessesUrl" value="/loginProcess"/>
+    </b:bean>
+
+    <b:bean id="failureHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+        <b:property name="defaultFailureUrl" value="/login?login_error=1" />
+    </b:bean>
+
+    <b:bean id="successHandler" class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
+        <b:property name="alwaysUseDefaultTargetUrl" value="false"/>
+        <b:property name="defaultTargetUrl" value="/"/>
+    </b:bean>
+
+    <!-- 验证前台用户 -->
+    <!--<b:bean id="failureHandler"
+            class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+        <b:property name="defaultFailureUrl" value="/login.jsp?error=true"/>
+    </b:bean>-->
+
+    <!--<b:bean id="successHandler"
+            class="org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler">
+        <b:property name="alwaysUseDefaultTargetUrl" value="true"/>
+        <b:property name="defaultTargetUrl" value="/index.html"/>
+    </b:bean>-->
+
+    <!-- 验证ajax请求-->
+    <b:bean id="ajaxLoginFilter" class="org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter">
+        <b:property name="authenticationManager" ref="authenticationManager"/>
+        <b:property name="authenticationFailureHandler" ref="ajaxFailureHandler"/>
+        <b:property name="authenticationSuccessHandler" ref="ajaxSuccessHandler"/>
+        <b:property name="filterProcessesUrl" value="/ajaxLoginProcess"/>
+    </b:bean>
+
+    <b:bean id="ajaxFailureHandler" class="com.doit.xiaowanjia.authentication.AjaxAuthenticationFailureHandler">
+        <b:property name="alwaysUseDefaultTargetUrl" value="true"/>
+        <b:property name="defaultTargetUrl" value="/login"/>
+    </b:bean>
+
+    <b:bean id="ajaxSuccessHandler" class="com.doit.xiaowanjia.authentication.AjaxAuthenticationSuccessHandler">
+        <b:property name="alwaysUseDefaultTargetUrl" value="true"/>
+        <b:property name="defaultTargetUrl" value="/login"/>
+    </b:bean>
+
+    <global-method-security  jsr250-annotations="enabled" secured-annotations="enabled" />
+
+    <authentication-manager>
+        <authentication-provider user-service-ref="accountDao">
+            <password-encoder ref="passwordEncoder"/>
+        </authentication-provider>
+    </authentication-manager>
+
+    <authentication-manager id="authenticationManager">
+        <authentication-provider user-service-ref="accountDao">
+            <password-encoder ref="passwordEncoder"/>
+        </authentication-provider>
+    </authentication-manager>
+
+    <authentication-manager id="backendAuthManager">
+        <authentication-provider user-service-ref="managerAccountDao">
+            <password-encoder ref="passwordEncoder"/>
+        </authentication-provider>
+    </authentication-manager>
+
+    <b:bean id="loginUrlEntryPoint" class="com.doit.xiaowanjia.authentication.LoginUrlEntryPoint"/>
+
+    <!-- 验证后台用户 -->
+    <b:bean id="backendLoginFilter"
+            class="org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter">
+        <b:property name="authenticationManager" ref="backendAuthManager"/>
+        <b:property name="authenticationFailureHandler" ref="adminFailureHandler"/>
+        <b:property name="authenticationSuccessHandler" ref="adminSuccessHandler"/>
+        <b:property name="filterProcessesUrl" value="/backend/j_security_check"/>
+    </b:bean>
+
+    <b:bean id="adminFailureHandler"
+            class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+        <b:property name="defaultFailureUrl" value="/backend/login?error=true"/>
+    </b:bean>
+
+    <b:bean id="adminSuccessHandler"
+            class="org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler">
+        <b:property name="alwaysUseDefaultTargetUrl" value="true"/>
+        <b:property name="defaultTargetUrl" value="/backend/index"/>
+    </b:bean>
+
+    <!-- 注销过滤器，完成前台用户注销时的定向功能 -->
+    <b:bean id="logoutFilter" class="org.springframework.security.web.authentication.logout.LogoutFilter">
+        <b:constructor-arg value="/login.jsp"/>
+        <b:constructor-arg>
+            <b:list>
+                <b:bean class="org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler"/>
+            </b:list>
+        </b:constructor-arg>
+        <b:property name="filterProcessesUrl" value="/logout"/>
+    </b:bean>
+
+    <!-- 注销过滤器，完成后台用户注销时的定向功能 -->
+    <b:bean id="backendLogoutFilter" class="org.springframework.security.web.authentication.logout.LogoutFilter">
+        <b:constructor-arg value="/backend/login.jsp"/>
+        <b:constructor-arg>
+            <b:list>
+                <b:bean class="org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler"/>
+            </b:list>
+        </b:constructor-arg>
+        <b:property name="filterProcessesUrl" value="/backend/logout"/>
+    </b:bean>
+
+    <b:bean id="sessionRegistry" class="org.springframework.security.core.session.SessionRegistryImpl"/>
+
+    <b:bean id="sas" class="org.springframework.security.web.authentication.session.ConcurrentSessionControlAuthenticationStrategy">
+        <b:constructor-arg name="sessionRegistry" ref="sessionRegistry"/>
+        <b:property name="maximumSessions" value="1"/>
+        <b:property name="exceptionIfMaximumExceeded" value="true"/>
+    </b:bean>
+    <!--<authentication-manager alias="authenticationManager" />-->
+
+
+    <!-- Override the default password-encoder (SHA) by uncommenting the following and changing the class -->
+    <!-- <bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.ShaPasswordEncoder"/> -->
+
+    <!--<global-method-security>
+        <protect-pointcut expression="execution(* *..service.UserManager.getUsers(..))" access="ROLE_ADMIN"/>
+        <protect-pointcut expression="execution(* *..service.UserManager.removeUser(..))" access="ROLE_ADMIN"/>
+    </global-method-security>-->
+
+    <b:bean id="httpSessionRequestCache" class="org.springframework.security.web.savedrequest.HttpSessionRequestCache"/>
+</b:beans>

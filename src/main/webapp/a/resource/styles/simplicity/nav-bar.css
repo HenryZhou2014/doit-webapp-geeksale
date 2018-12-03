@@ -1,0 +1,105 @@
+@media (min-width: 1024px) {
+    .container {
+        min-width: 1280px;
+    }
+}
+
+.navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+    border: none;
+}
+
+.nav li a {
+    /*padding: 30px 15px;*/
+    color: #FFFFFF;
+    line-height: 80px;
+    padding: 0;
+    display: block;
+    margin: 0;
+    font-family: "Microsoft Yahei", "微软雅黑", "宋体", "新宋体", "黑体", STHeiti;
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+    background: none;
+    border-bottom: 5px solid #ca271c;
+}
+.nav li a.menu:hover, .nav li a.menu:focus {
+    background: none;
+    border-bottom: 5px solid #bac0af;
+}
+
+.menu-active {
+    background: #ca271c;
+
+}
+.navbar-right {
+    margin-right: 0px;
+}
+
+.navbar .navbar-brand {
+    padding: 0;
+}
+
+.menu {
+    width: 75px;
+}
+
+
+.menu-default-active {
+    background-color: #f0f0f0;
+}
+
+.menuPanel {
+    text-align: center;
+}
+
+.menuPanel > ul {
+    padding: 0;
+    margin: 0;
+}
+
+.menuPanel > ul > li {
+    background: url(images/lhs-arts/menu-item-dot-inactive.png) 0 50% no-repeat;
+    list-style: none;
+    padding-left: 15px;
+    margin-right: 70px;
+}
+
+.menuPanel > ul > li.active {
+    background: url(images/lhs-arts/menu-item-dot.png) 0 50% no-repeat;
+}
+
+.menuPanel > ul > li:hover {
+    background: url(images/lhs-arts/menu-item-dot.png) 0 50% no-repeat;
+}
+
+.menuPanel > ul > li > a {
+    color: #666;
+    line-height: 35px;
+    font-size: 15px;
+}
+
+.calloutMenu {
+    background: url(images/lhs-arts/menu-bg-callout.png) no-repeat;
+    padding: 0 15px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.calloutMenu li {
+    list-style: none;
+    margin-right: 10px;
+    line-height: 26px;
+}
+
+.calloutMenu li a {
+    font-weight: normal;
+    color: #666;
+    font-size: 10px;
+}
+
+.calloutMenu a {
+    font-weight: normal;
+    font-size: 10px;
+}

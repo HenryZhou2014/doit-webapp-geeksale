@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Founder State="true" Message="">
+    <document>
+        <resource>
+            <metadata name="type">基本信息</metadata>
+            <metadata name="contentType">PRODUCT/BOOK</metadata>
+            <metadata name="SYS_DOCUMENTID" trans="唯一标识">186784</metadata>
+            <metadata name="SYS_TOPIC" trans="书名">test0014</metadata>
+            <metadata name="ISBN" trans="ISBN">978-7-5442-7087-3</metadata>
+            <metadata name="MATERIAL_ID" trans="物料号"/>
+            <metadata name="SERIES_NAME" trans="丛书名"/>
+            <metadata name="PRESS_NAME" trans="出版社">1</metadata>
+            <metadata name="BOOK_CAT" trans="图书分类" catcode="" catid="81043">基础教育分社</metadata>
+            <metadata name="WEBSITE_CAT" trans="图书内容分类" catid="0"/>
+            <metadata name="LANGUAGE" trans="语种"/>
+            <metadata name="EDITOR" trans="责任编辑">策划编辑a</metadata>
+            <metadata name="COPY_DESIGNER" trans="版式设计"/>
+            <metadata name="SYS_AUTHORS" trans="作者">11</metadata>
+            <metadata name="COVER_DESIGNER" trans="封面设计"/>
+            <metadata name="MAJOR_EDITOR" trans="主编"/>
+            <metadata name="TRANSLATOR" trans="翻译/译者"/>
+            <metadata name="PRINT_VERSION" trans="印次">1</metadata>
+            <metadata name="BOOK_VERSION" trans="版次">1</metadata>
+            <metadata name="PUBDATE" trans="出版时间">2014-10-01</metadata>
+            <metadata name="TEXT_NUM" trans="页数">0</metadata>
+            <metadata name="PRICE" trans="定价">0.0</metadata>
+            <metadata name="READER_OBJECT" trans="读者对象"/>
+            <metadata name="SHELF_ADVICE" trans="上架建议"/>
+            <metadata name="FORMAT" trans="开本"/>
+            <metadata name="PRODUCT_SIZE" trans="成品尺寸"/>
+            <metadata name="TEXT_TYPE" trans="正文用纸"/>
+            <metadata name="TEXT_COLOR" trans="正文色数"/>
+            <metadata name="TEXT_SOFT" trans="正文排版软件"/>
+            <metadata name="COVER_SOFT" trans="封面排版软件"/>
+            <metadata name="FLAT_PLATE" trans="排版公司"/>
+            <metadata name="SUPPORT_PRODUCT" trans="配套产品"/>
+            <metadata name="DEPART" trans="分社/部门" catcode="" catid="88343">默认公司</metadata>
+            <metadata name="KEYWORDS" trans="关键词"/>
+            <metadata name="REMARK" trans="备注"/>
+        </resource>
+        <resource>
+            <metadata name="type">附件信息</metadata>
+            <metadata name="contentType">lowqualitypdf</metadata>
+            <metadata name="PATH">attach/低精度PDF/topicPdf39.pdf</metadata>
+            <metadata name="SYS_TOPIC">topicPdf39.pdf</metadata>
+        </resource>
+        <resource>
+            <metadata name="type">附件信息</metadata>
+            <metadata name="contentType">lowqualitypdf</metadata>
+            <metadata name="PATH">attach/低精度PDF/articlePdf132.pdf</metadata>
+            <metadata name="SYS_TOPIC">articlePdf132.pdf</metadata>
+        </resource>
+        <resource>
+            <metadata name="type">附件信息</metadata>
+            <metadata name="contentType">partpdf</metadata>
+            <metadata name="PATH">attach/样张PDF/test0014_样张(79270).pdf</metadata>
+            <metadata name="SYS_TOPIC">test0014_样张(79270).pdf</metadata>
+        </resource>
+        <resource>
+            <metadata name="type">附件信息</metadata>
+            <metadata name="contentType">partpdf</metadata>
+            <metadata name="PATH">attach/样张PDF/test0014_样张(79271).pdf</metadata>
+            <metadata name="SYS_TOPIC">test0014_样张(79271).pdf</metadata>
+        </resource>
+        <resource>
+            <metadata name="type">附件信息</metadata>
+            <metadata name="contentType">partpdf</metadata>
+            <metadata name="PATH">attach/样张PDF/test0014_样张(79344).pdf</metadata>
+            <metadata name="SYS_TOPIC">test0014_样张(79344).pdf</metadata>
+        </resource>
+        <resource>
+            <metadata name="type">相关资源</metadata>
+            <metadata name="contentType">relation/ILLUSTRATION-PIC</metadata>
+            <metadata name="SYS_DOCUMENTID" trans="唯一标识">186802</metadata>
+            <metadata name="SYS_TOPIC" trans="图片名称">中国生态系统定位观测与研究数据集.农田生态系统卷.陕西安塞站：1998～2007</metadata>
+            <metadata name="原图">relation//4557C6960737.jpg</metadata>
+            <metadata name="中图">relation/141088_m.jpg</metadata>
+            <metadata name="小图">relation/141088_s.jpg</metadata>
+        </resource>
+    </document>
+</Founder>

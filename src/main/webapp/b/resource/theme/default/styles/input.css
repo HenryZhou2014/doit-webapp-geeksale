@@ -1,0 +1,19 @@
+.input-xlarge {
+    width: 350px;
+}
+
+.form-group-wrapper {
+    border: 1px solid #F4F4F4;
+}
+
+.form-group-wrapper .even {
+    background: #F4F4F4;
+    padding: 5px 20px;
+    margin-top: 0px;
+}
+
+.form-group-wrapper .odd {
+    background: #FFFFFF;
+    padding: 5px 20px;
+    margin-top: 0px;
+}

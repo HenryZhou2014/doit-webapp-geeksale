@@ -1,0 +1,528 @@
+html{
+    font-family:"Microsoft Yahei", "微软雅黑","宋体", "新宋体","黑体", STHeiti;
+}
+
+.areaLine{
+    background: rgba(0, 0, 0, 0) url(./images/line.png) no-repeat scroll center top;
+    height: 9px;
+    margin: 0;
+    overflow: hidden;
+}
+
+#pagelet-hotnews .head::before {
+    background-color: #ed4040;
+    border-radius: 5px;
+    content: "";
+    display: inline-block;
+    float: left;
+    height: 16px;
+    left: 0;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    width: 4px;
+}
+
+#pagelet-hotnews .head {
+    color: #444;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    padding-left: 10px;
+    position: relative;
+}
+
+ul.column-menu-news{
+    /*z-index: 10000;*/
+}
+
+ul.column-menu-news li{
+    font-size: 18px;
+    line-height: 40px;
+    background: lightgrey;
+}
+
+ul.column-menu-news li a{
+    padding: 5px 10px;
+    /*border-radius: 10px;*/
+    display: block;
+    color: #666;
+}
+
+ul.column-menu-news li a:hover{
+    background: lightcoral;
+}
+
+.cat_news_recommend{
+    padding-left: 30px;
+    background: url(images/recommand_channel_aa9f279.png) no-repeat;
+}
+
+.cat_news_hot{
+    padding-left: 30px;
+    background: url(images/hot_channel_5efcb5e.png) no-repeat;
+}
+
+.cat_news_sports{
+    padding-left: 34px;
+    background: url(images/sports_channel_e0d57f8.png) no-repeat;
+}
+
+.cat_news_technology{
+    padding-left: 34px;
+    background: url(images/technology_channel_3207fbd.png) no-repeat;
+}
+
+.cat_news_entertainment{
+    padding-left: 34px;
+    background: url(images/entertainment_channel_00295f6.png) no-repeat;
+}
+
+.highlightedText{
+    color: #CB271B;
+    font-weight: bold;
+}
+
+a.btn{
+    border-width: 1px;
+    border-radius: 0;
+}
+
+.icon-qq{
+    background: url(./simplicity/images/lhs-arts/qq_logo.png) 50% 20% no-repeat;
+}
+
+.icon-weixin{
+    background: url(./simplicity/images/lhs-arts/weixin_logo.png) 50% 20% no-repeat;
+}
+
+.icon-weibo{
+}
+
+ul.relatednews-newslist{
+    margin: 0;
+    padding: 0;
+}
+
+ul.relatednews-newslist li{
+    background: url(../images/line-dot/list-dot-01.jpg) 0 10px no-repeat;
+    padding-left: 10px;
+    margin: 3px 0;
+}
+
+ul.relatednews-newslist li a{
+    color : #444;
+    /*white-space: nowrap;*/
+    text-overflow: ellipsis;
+}
+
+/*,/////////////////////////////////////////////////////////*/
+.dtag {
+    position: relative;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 700;
+    color: #222;
+    padding-left: 14px;
+    margin-bottom: 20px;
+}
+
+.dtag:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 18px;
+    left: 0;
+    top: 50%;
+    margin-top: -9px;
+    background: #ed4040;
+    border-radius: 5px;
+}
+
+/*//////////////////////////////////////////////////////////////////////////*/
+
+#pagelet-ncomment {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#pagelet-ncomment .cheader {
+    margin-bottom: 30px;
+}
+
+#pagelet-ncomment .cheader .dtag {
+    float: left;
+    margin-bottom: 0;
+}
+
+#pagelet-ncomment .cheader .ctotal .ctotalnum {
+    font-size: 22px;
+    padding-left: 26px;
+}
+
+#pagelet-ncomment .ceditzone {
+    margin-bottom: 30px;
+}
+
+#pagelet-ncomment .ceditzone .cavatar {
+    margin-top: 3px;
+}
+
+#pagelet-ncomment .directComment .cinput {
+    width: 100%;
+}
+
+#pagelet-ncomment .cavatar {
+    position: relative;
+    float: left;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #E8E8E8;
+    border-radius: 50%;
+    overflow: hidden;
+    /*background: url(//s3.pstatp.com/toutiao/resource/toutiao_web/static/style/image/newindex/default40_c78f50e.png?__sprite) no-repeat center;*/
+}
+
+#pagelet-ncomment .ceditzone .cedit {
+    position: relative;
+    font-size: 16px;
+    color: #bababa;
+    border: 1px solid #ddd;
+}
+
+#pagelet-ncomment .ceditzone .cbody {
+    margin-left: 54px;
+    font-size: 14px;
+}
+
+#pagelet-ncomment .ceditzone .cedit .ctextarea {
+    padding: 12px 16px 0;
+}
+
+#pagelet-ncomment .ceditzone .cedit.focus .ctextarea .cinput {
+    height: 80px;
+    font-size: 14px;
+}
+
+#pagelet-ncomment .ceditzone .cedit .ctextarea .cinput {
+    display: block;
+    font-size: 14px;
+    width: 100%;
+    height: 32px;
+    resize: none;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    -webikt-transition: .1s height linear;
+    -webkit-transition: .1s height linear;
+    transition: .1s height linear;
+}
+
+#pagelet-ncomment .ceditzone .cedit .caction {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    border: 0;
+    height: 44px;
+}
+
+#pagelet-ncomment .ceditzone .cedit.focus .caction {
+    position: relative;
+    height: 48px;
+    background-color: #f4f5f6;
+    border-top: 1px solid #efefef;
+    padding-left: 16px;
+}
+
+#pagelet-ncomment .ceditzone .cedit .caction .csubmit {
+    line-height: 44px;
+    background-color: #e8e8e8;
+    float: right;
+    width: 110px;
+    height: 100%;
+    color: #444;
+    text-align: center;
+    cursor: pointer;
+}
+
+#pagelet-ncomment .ceditzone .cedit.focus .caction .csubmit {
+    line-height: 48px;
+}
+
+#pagelet-ncomment .ceditzone .cedit.focus .caction .csubmit.active {
+    background-color: #7091ce;
+    box-shadow: inset 0 1px 0 0 rgba(239, 239, 238, .004);
+}
+
+#pagelet-ncomment .cloadmore.show {
+    display: block;
+}
+
+#pagelet-ncomment .cloadmore {
+    display: none;
+    width: 190px;
+    height: 30px;
+    line-height: 30px;
+    margin: 30px auto;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    background: #d8d8d8;
+    border-radius: 4px;
+}
+
+#pagelet-ncomment .clist{
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#pagelet-ncomment .clist .citem {
+    margin-bottom: 15px;
+    list-style-type: none;
+}
+
+#pagelet-ncomment .cavatar {
+    position: relative;
+    float: left;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #E8E8E8;
+    border-radius: 50%;
+    overflow: hidden;
+    background: url(../images/default-profile-image.png) no-repeat center;
+}
+
+#pagelet-ncomment .cavatar img {
+    border-radius: 100%;
+    /*opacity: 0;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    -webkit-transition: .3s opacity ease-in-out;
+    transition: .3s opacity ease-in-out;
+}
+
+#pagelet-ncomment .clist .citem .cuser {
+    margin-bottom: 8px;
+}
+
+#pagelet-ncomment .clist .citem .ctxt {
+    font-size: 16px;
+    line-height: 22px;
+    color: #444;
+    margin-bottom: 16px;
+}
+
+#pagelet-ncomment .clist .citem .cinfo {
+    color: #999;
+    line-height: 1;
+}
+
+#pagelet-ncomment .clist .citem .cinfo .ctime {
+    font-size: 12px;
+    float: left;
+}
+
+#pagelet-ncomment .clist .citem .cinfo .c-actions {
+    float: right;
+}
+
+#pagelet-ncomment .clist .citem .cinfo .c-actions .cdigg {
+    position: relative;
+    top: -1px;
+    color: #999;
+}
+
+#pagelet-ncomment .clist .citem .cinfo .c-actions .cbtn {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+}
+
+#pagelet-ncomment .clist .citem .cinfo .c-actions .cdigg .cbtn {
+    margin-left: 5px;
+    background: url(//s3b.pstatp.com/toutiao/resource/toutiao_web/static/style/image/newindex/digg_article_normal_027a629.png?__sprite) no-repeat center;
+}
+
+#pagelet-ncomment .clist .citem .cinfo .c-actions .cdigg .zan-ok {
+    /*background: url(//s3.pstatp.com/toutiao/resource/toutiao_web/static/style/image/newindex/digg_article_pressed_bc7a7e2.png?__sprite) no-repeat center;*/
+}
+
+
+.art-zan-ok {
+    color: #ff0000;
+}
+
+#pagelet-ncomment .clist .citem .cinfo .c-actions .creply {
+    margin: 0 26px;
+}
+
+#pagelet-ncomment .clist .citem .cinfo .c-actions .creply .cbtn {
+    background: url(//s3a.pstatp.com/toutiao/resource/toutiao_web/static/style/image/newindex/comments2_article_normal_8125285.png?__sprite) no-repeat center;
+}
+
+#pagelet-ncomment .clist .citem .cinfo .c-actions .creport .cbtn {
+    background: url(//s3b.pstatp.com/toutiao/resource/toutiao_web/static/style/image/newindex/article_ic_report_normal_3073fd1.png?__sprite) no-repeat center;
+}
+
+#pagelet-ncomment .parent {
+    /*padding: 10px 30px;*/
+}
+
+#pagelet-ncomment .parent .content {
+    padding: 10px 15px;
+    background-color: #efefef;
+    border-radius: 3px;
+}
+
+#pagelet-ncomment .parent .comment-user {
+    color: #5f7eb4;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+#pagelet-ncomment .parent .comment-date {
+    font-size: 12px;
+}
+
+#pagelet-ncomment .parent .text {
+    font-size: 14px;
+}
+
+#pagelet-ncomment .reply {
+    text-align: right;
+    margin-top: 15px;
+    /*display: none;*/
+}
+
+#pagelet-ncomment .reply textarea {
+    width: 100%;
+    padding: 6px 8px 0;
+    font-size: 14px;
+    line-height: 18px;
+    min-height: 66px;
+}
+
+#pagelet-ncomment .reply.show {
+    display: block;
+}
+
+.newsct_share {
+    width: 34px;
+    position: fixed;
+    bottom: 108px;
+    left: 50% !important;
+    margin-left: -648px;
+    z-index: 999;
+}
+
+.newsct_share a {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 6px;
+    display: block;
+    float: left;
+    background: url(../images/sns/share_bg35.png) no-repeat;
+    outline: 0;
+}
+
+.ctshare_sina {
+    background-position: 0 1px !important;
+}
+
+.ctshare_zone {
+    background-position: 0 -39px !important;
+}
+
+.ctshare_tx {
+    background-position: 0 -79px !important;
+}
+
+.ctshare_rr {
+    background-position: 0 -119px !important;
+}
+
+.pagelet-relatednews {
+    margin-bottom: 30px;
+}
+
+.pagelet-relatednews .dtag {
+    margin-bottom: 4px;
+}
+
+.menu-stickup {
+    margin-top: 40px;
+    position: relative;
+    z-index: 15;
+    width: 165px;
+}
+
+.artile-author-items {
+    /*font-size: 12px;*/
+}
+
+.artile-author-items h4 {
+    font-size: 16px;
+    font-family: "Microsoft Yahei", "微软雅黑", "宋体", "新宋体", "黑体", STHeiti;
+    font-weight: 800;
+}
+
+.article-toolbar-items {
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.article-toolbar-items a {
+    color: darkgrey;
+}
+
+.article-toolbar-items a:hover {
+    color: #666;
+}
+
+.article-content {
+}
+
+.article-content p {
+    font-size: 16px;
+    margin-bottom:5px;
+}
+
+ul.navigator-bar {
+    margin-bottom: 0;
+}
+
+ul.article-info {
+    margin-bottom: 0;
+}
+
+.news_title h2 {
+    color: #333333;
+    font-size: 32px;
+    line-height: 44px;
+    margin: 28px 0 34px;
+    font-weight: bold;
+}
+
+.article-time, .article-source {
+    font-size: 14px;
+    color: #8e8e8e;
+    line-height: 24px;
+}
+
+.navigator-bar a {
+    color: rgb(102, 102, 102);
+}
+
+.clist .c-actions {
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 769px) {
+    #header ul.has-topBar>li.search .search-box {
+        top:62px !important;
+        padding: 0;
+    }
+}

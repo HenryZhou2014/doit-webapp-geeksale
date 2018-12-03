@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Founder State="true" Message="">
+    <document>
+        <resource>
+            <metadata name="type">基本信息</metadata>
+            <metadata name="contentType">PRODUCT/BOOK</metadata>
+            <metadata name="SYS_DOCUMENTID" trans="唯一标识">245532</metadata>
+            <metadata name="SYS_TOPIC" trans="书名">道路运输组织学</metadata>
+            <metadata name="ISBN" trans="ISBN">978-7-5646-2869-7</metadata>
+            <metadata name="MATERIAL_ID" trans="物料号">20086984</metadata>
+            <metadata name="SERIES_NAME" trans="丛书名">自定义丛书名</metadata>
+            <metadata name="PRESS_NAME" trans="出版社">中国矿业大学出版社有限责任公司</metadata>
+            <metadata name="BOOK_CAT" trans="图书分类" catcode="F5" catid="89227">交通运输经济</metadata>
+            <metadata name="WEBSITE_CAT" trans="图书内容分类" catid="0"/>
+            <metadata name="LANGUAGE" trans="语种">中文</metadata>
+            <metadata name="EDITOR" trans="责任编辑">史凤萍</metadata>
+            <metadata name="COPY_DESIGNER" trans="版式设计">版式设计</metadata>
+            <metadata name="SYS_AUTHORS" trans="作者">顾正洪</metadata>
+            <metadata name="COVER_DESIGNER" trans="封面设计"/>
+            <metadata name="MAJOR_EDITOR" trans="主编">主编X先生</metadata>
+            <metadata name="TRANSLATOR" trans="翻译/译者">翻译Y先生</metadata>
+            <metadata name="PRINT_VERSION" trans="印次">1</metadata>
+            <metadata name="BOOK_VERSION" trans="版次">1</metadata>
+            <metadata name="PUBDATE" trans="出版时间">2015-10-27</metadata>
+            <metadata name="TEXT_NUM" trans="页数">232</metadata>
+            <metadata name="PRICE" trans="定价">22.0</metadata>
+            <metadata name="READER_OBJECT" trans="读者对象">读者对象中小学生</metadata>
+            <metadata name="SHELF_ADVICE" trans="上架建议">上架建议关照都</metadata>
+            <metadata name="FORMAT" trans="开本">16开</metadata>
+            <metadata name="PRODUCT_SIZE" trans="成品尺寸">成品尺寸23寸</metadata>
+            <metadata name="TEXT_TYPE" trans="正文用纸">铜版纸</metadata>
+            <metadata name="TEXT_COLOR" trans="正文色数">红色</metadata>
+            <metadata name="TEXT_SOFT" trans="正文排版软件">正文排版软件</metadata>
+            <metadata name="COVER_SOFT" trans="封面排版软件">封面排版软件</metadata>
+            <metadata name="FLAT_PLATE" trans="排版公司">排版公司</metadata>
+            <metadata name="SUPPORT_PRODUCT" trans="配套产品">配套产品</metadata>
+            <metadata name="DEPART" trans="分社/部门" catid="0"/>
+            <metadata name="KEYWORDS" trans="关键词">关键词</metadata>
+            <metadata name="REMARK" trans="备注">备注X</metadata>
+            <metadata name="DIGITRIGHTENDTIME" trans="印刷时间">2015-10-26</metadata>
+            <metadata name="PRINT_NUM" trans="字数">27600</metadata>
+            <metadata name="FITMENT" trans="装帧">平装</metadata>
+            <metadata name="TWCL" trans="分类">高等学校教学用书</metadata>
+        </resource>
+        <resource>
+            <metadata name="type">精编信息</metadata>
+            <metadata name="contentType">简介</metadata>
+            <metadata name="SYS_TOPIC">简介</metadata>
+            <metadata name="SYS_AUTHORS"/>
+            <metadata name="CONTENT"><![CDATA[本书分为9章，主要介绍了运输组织原理、公路运输组织、公路客运和货运组织、城市交通运输组织、集装箱运输与多式联运、交通场站与枢纽运输组织以及物流运输组织与运输技术等相关知识。
+本书可供交通运输、载运工具运用工程等专业的学生使用，以及从事汽车服务行业和相关工程技术的人员学习参考。]]></metadata>
+        </resource>
+        <resource>
+            <metadata name="type">附件信息</metadata>
+            <metadata name="contentType">partpdf</metadata>
+            <metadata name="PATH">attach/样张PDF/道路运输组织学_样张.pdf</metadata>
+            <metadata name="SYS_TOPIC">道路运输组织学_样张.pdf</metadata>
+        </resource>
+        <resource>
+            <metadata name="type">相关资源</metadata>
+            <metadata name="contentType">relation/COVER-PIC</metadata>
+            <metadata name="SYS_DOCUMENTID" trans="唯一标识">245585</metadata>
+            <metadata name="SYS_TOPIC" trans="图片名称">道路运输组织学.jpg</metadata>
+            <metadata name="PUB_VERSION" trans="版次">1</metadata>
+            <metadata code="frontcover" name="原图">relation//5B0C2C7B4DBCAC4E7D9E6DFA1D7A.jpg</metadata>
+            <metadata code="frontcover" name="中图">relation/278681_m.jpg</metadata>
+            <metadata code="frontcover" name="小图">relation/278681_s.jpg</metadata>
+        </resource>
+    </document>
+</Founder>

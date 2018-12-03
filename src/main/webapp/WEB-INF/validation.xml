@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC
+        "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.3.0//EN"
+        "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
+
+<form-validation>
+    <global>
+        <constant>
+            <constant-name>phone</constant-name>
+            <constant-value>^\(?(\d{3})\)?[-| ]?(\d{3})[-| ]?(\d{4})$</constant-value>
+        </constant>
+        <constant>
+            <constant-name>zip</constant-name>
+            <constant-value>^\d{5}\d*$</constant-value>
+        </constant>
+        <constant>
+            <constant-name>currency</constant-name>
+            <constant-value>^\d{1,3}(,?\d{1,3})*\.?(\d{1,2})?$</constant-value>
+        </constant>
+    </global>
+    <formset>
+        <form name="fileUpload">
+            <field property="name" depends="required">
+                <arg key="uploadForm.name"/>
+            </field>
+            <!-- Client-side Javascript won't catch this in IE, but server-side will -->
+            <field property="file" depends="required">
+                <arg key="uploadForm.file"/>
+            </field>
+        </form>
+        <form name="address">
+            <field property="city" depends="required">
+                <arg key="address.city"/>
+            </field>
+            <field property="country" depends="required">
+                <arg key="address.country"/>
+            </field>
+            <field property="postalCode" depends="required,mask">
+                <msg name="mask" key="errors.zip"/>
+                <arg key="address.postalCode"/>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${zip}</var-value>
+                </var>
+            </field>
+            <field property="province" depends="required">
+                <arg key="address.province"/>
+            </field>
+        </form>
+        <form name="user">
+            <field property="username" depends="required">
+                <arg key="user.username"/>
+            </field>
+            <field property="password" depends="required,twofields">
+                <msg name="twofields" key="errors.twofields"/>
+                <arg key="user.password"/>
+                <arg key="user.confirmPassword" position="1"/>
+                <var>
+                    <var-name>secondProperty</var-name>
+                    <var-value>confirmPassword</var-value>
+                </var>
+            </field>
+            <field property="confirmPassword" depends="required">
+                <arg key="user.confirmPassword"/>
+            </field>
+            <field property="name" depends="required">
+                <arg key="user.name"/>
+            </field>
+            <!--<field property="firstName" depends="required">
+                <arg key="user.firstName"/>
+            </field>
+            <field property="lastName" depends="required">
+                <arg key="user.lastName"/>
+            </field>-->
+            <!--<field property="address.city" depends="required">
+                <arg key="user.address.city"/>
+            </field>
+            <field property="address.country" depends="required">
+                <arg key="user.address.country"/>
+            </field>
+            <field property="address.postalCode" depends="required,mask">
+                <msg name="mask" key="errors.zip"/>
+                <arg key="user.address.postalCode"/>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${zip}</var-value>
+                </var>
+            </field>
+            <field property="address.province" depends="required">
+                <arg key="user.address.province"/>
+            </field>-->
+            <field property="email" depends="required,email">
+                <arg key="user.email"/>
+            </field>
+            <!--<field property="phoneNumber" depends="mask">
+                <msg name="mask" key="errors.phone"/>
+                <arg key="user.phoneNumber"/>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${phone}</var-value>
+                </var>
+            </field>-->
+            <!--<field property="passwordHint" depends="required">
+                <arg key="user.passwordHint"/>
+            </field>-->
+        </form>
+        
+        <!--AccessLog-START-->
+        <form name="accessLog">
+        </form>
+        <!--AccessLog-END-->
+        <!--SystemLog-START-->
+        <form name="systemLog">
+        </form>
+        <!--SystemLog-END-->
+        <!--OperateLog-START-->
+        <form name="operateLog">
+        </form>
+        <!--OperateLog-END-->
+        
+
+        <!--AddressBook-START-->
+        <form name="addressBook">
+            <field property="name" depends="required">
+                <arg key="addressBook.name"/>
+            </field>
+        </form>
+        <!--AddressBook-END-->
+
+
+        <form name="agendaForm">
+            <field property="title" depends="required">
+                <arg key="agenda.title"/>
+            </field>
+        </form>
+
+        <!--Department-START-->
+        <form name="department">
+        </form>
+        <!--Department-END-->
+        <!--ImInbox-START-->
+        <form name="imInbox">
+        </form>
+        <!--ImInbox-END-->
+        <!--ImOutbox-START-->
+        <form name="imOutbox">
+        </form>
+        <!--ImOutbox-END-->
+        <!--MessageInbox-START-->
+        <form name="messageInbox">
+        </form>
+        <!--MessageInbox-END-->
+        <!--MessageOutbox-START-->
+        <form name="messageOutbox">
+        </form>
+        <!--MessageOutbox-END-->
+        
+        <!--Notification-START-->
+        <form name="notification">
+        </form>
+        <!--Notification-END-->
+        <!--AddressGroup-START-->
+        <form name="addressGroup">
+        </form>
+        <!--AddressGroup-END-->
+
+        <form name="todoForm">
+            <field property="title" depends="required">
+                <arg key="todo.title"/>
+            </field>
+        </form>
+        <!--BudgetPayment-START-->
+        <form name="budgetPayment">
+            <field property="contractId" depends="required">
+                <arg key="budgetPayment.contractId"/>
+            </field>
+            <field property="payValue" depends="required">
+                <arg key="budgetPayment.payValue"/>
+            </field>
+            <field property="paymentDate" depends="required,date">
+                <msg name="date" key="errors.date"/>
+                <arg key="budgetPayment.paymentDate"/>
+                <var>
+                    <var-name>datePattern</var-name>
+                    <var-value>yyyy-MM-dd</var-value>
+                </var>
+            </field>
+        </form>
+        <!--BudgetPayment-END-->
+        <!--BudgetPayment-START-->
+        <form name="budgetSmallPayment">
+            <field property="budgetContract.subjectId" depends="required">
+                <arg key="budgetContract.subjectId"/>
+            </field>
+            <field property="payValue" depends="required">
+                <arg key="budgetPayment.payValue"/>
+            </field>
+            <field property="paymentDate" depends="required,date">
+                <msg name="date" key="errors.date"/>
+                <arg key="budgetPayment.paymentDate"/>
+                <var>
+                    <var-name>datePattern</var-name>
+                    <var-value>yyyy-MM-dd</var-value>
+                </var>
+            </field>
+        </form>
+        <!--BudgetPayment-END-->
+        <!--BudgetPayment-START-->
+        <form name="materialPayment">
+            <field property="payValue" depends="required">
+                <arg key="budgetPayment.payValue"/>
+            </field>
+            <field property="paymentDate" depends="required,date">
+                <msg name="date" key="errors.date"/>
+                <arg key="budgetPayment.paymentDate"/>
+                <var>
+                    <var-name>datePattern</var-name>
+                    <var-value>yyyy-MM-dd</var-value>
+                </var>
+            </field>
+        </form>
+        <!--BudgetPayment-END-->
+        <!--BudgetPayment-START-->
+        <form name="extraProjectPayment">
+            <field property="subjectId" depends="required">
+                <arg key="extraProjectPayment.subjectId"/>
+            </field>
+            <field property="payValue" depends="required">
+                <arg key="budgetPayment.payValue"/>
+            </field>
+            <field property="paymentDate" depends="required,date">
+                <msg name="date" key="errors.date"/>
+                <arg key="extraProjectPayment.paymentDate"/>
+                <var>
+                    <var-name>datePattern</var-name>
+                    <var-value>yyyy-MM-dd</var-value>
+                </var>
+            </field>
+        </form>
+        <!--BudgetPayment-END-->
+
+        <!--BudgetContract-START-->
+        <form name="budgetContract">
+            <field property="subjectId" depends="required">
+                <arg key="budgetContract.subjectId"/>
+            </field>
+            <field property="contractName" depends="required">
+                <arg key="budgetContract.contractName"/>
+            </field>
+            <field property="contractType" depends="required">
+                <arg key="budgetContract.contractType"/>
+            </field>
+        </form>
+        <!--BudgetContract-END-->
+        <!--BudgetProfile-START-->
+        <form name="budgetProfile">
+        </form>
+        <!--BudgetProfile-END-->
+        <!--BudgetIncome-START-->
+        <form name="budgetIncome">
+            <field property="amount" depends="required">
+                <arg key="budgetIncome.amount"/>
+            </field>
+            <!--<field property="dateOfIncome" depends="required">
+                <arg key="budgetIncome.dateOfIncome"/>
+            </field>-->
+            <field property="dateOfIncome" depends="required,date">
+                <msg name="date" key="errors.date"/>
+                <arg key="budgetIncome.dateOfIncome"/>
+                <var>
+                    <var-name>datePattern</var-name>
+                    <var-value>yyyy-MM-dd</var-value>
+                </var>
+            </field>
+        </form>
+        <!--BudgetIncome-END-->
+        <!--BudgetSubject-START-->
+        <form name="budgetSubject">
+            <field property="subjectName" depends="required">
+                <arg key="budgetSubject.subjectName"/>
+            </field>
+        </form>
+        <!--BudgetSubject-END-->
+        <!--BudgetProject-START-->
+        <form name="budgetProject">
+            <field property="projectCode" depends="required">
+                <arg key="budgetProject.projectCode"/>
+            </field>
+            <field property="projectName" depends="required">
+                <arg key="budgetProject.projectName"/>
+            </field>
+        </form>
+        <!--BudgetProject-END-->
+        <!--BudgetSubjectClass-START-->
+        <form name="budgetSubjectClass">
+            <field property="className" depends="required">
+                <arg key="budgetSubjectClass.className"/>
+            </field>
+        </form>
+        <!--BudgetSubjectClass-END-->
+        <!--Account-START-->
+        <form name="account">
+            <field property="accountName" depends="required">
+                <arg key="account.accountName"/>
+            </field>
+            <field property="userName" depends="required">
+                <arg key="account.userName"/>
+            </field>
+        </form>
+        <!--Account-END-->
+        <!--CompanyInfo-START-->
+        <form name="companyInfo">
+            <field property="companyName" depends="required">
+                <arg key="companyInfo.companyName"/>
+            </field>
+        </form>
+        <!--CompanyInfo-END-->
+        <!--WebLink-START-->
+        <form name="webLink">
+            <field property="title" depends="required">
+                <arg key="webLink.title"/>
+            </field>
+            <field property="url" depends="required">
+                <arg key="webLink.url"/>
+            </field>
+        </form>
+        <!--WebLink-END-->
+        <!--Article-START-->
+        <form name="article">
+            <field property="title" depends="required">
+                <arg key="article.title"/>
+            </field>
+        </form>
+        <!--Article-END-->
+        
+        <!--ArticleCategory-START-->
+        <form name="articleCategory">
+            <field property="title" depends="required">
+                <arg key="articleCategory.title"/>
+            </field>
+            <field property="aliasName" depends="required">
+                <arg key="articleCategory.aliasName"/>
+            </field>
+        </form>
+        <!--ArticleCategory-END-->
+        <!--SellOffer-START-->
+        <form name="sellOffer">
+            <field property="productCategoryId" depends="required">
+                <arg key="sellOffer.productCategoryId"/>
+            </field>
+            <field property="productName" depends="required">
+                <arg key="sellOffer.productName"/>
+            </field>
+        </form>
+        <!--SellOffer-END-->
+        <!--BuyOffer-START-->
+        <form name="buyOffer">
+            <field property="productName" depends="required">
+                <arg key="buyOffer.productName"/>
+            </field>
+        </form>
+        <!--BuyOffer-END-->
+        <!--ProductIndustry-START-->
+        <form name="productIndustry">
+            <field property="industryName" depends="required">
+                <arg key="productIndustry.industryName"/>
+            </field>
+        </form>
+        <!--ProductIndustry-END-->
+        <!--ProductBrand-START-->
+        <form name="productBrand">
+            <field property="aliasName" depends="required">
+                <arg key="productBrand.aliasName"/>
+            </field>
+            <field property="brandName" depends="required">
+                <arg key="productBrand.brandName"/>
+            </field>
+        </form>
+        <!--ProductBrand-END-->
+        <!--ProductCategory-START-->
+        <form name="productCategory">
+            <field property="aliasName" depends="required">
+                <arg key="productCategory.aliasName"/>
+            </field>
+            <field property="title" depends="required">
+                <arg key="productCategory.title"/>
+            </field>
+        </form>
+        <!--ProductCategory-END-->
+        <!--FarmGoodsQuotation-START-->
+        <form name="farmGoodsQuotation">
+            <field property="goodsName" depends="required">
+                <arg key="farmGoodsQuotation.goodsName"/>
+            </field>
+            <field property="quotDate" depends="required">
+                <arg key="farmGoodsQuotation.quotDate"/>
+            </field>
+        </form>
+        <!--FarmGoodsQuotation-END-->
+        <!--FoodSecurityTest-START-->
+        <form name="foodSecurityTest">
+            <field property="goodsName" depends="required">
+                <arg key="foodSecurityTest.goodsName"/>
+            </field>
+            <field property="testDate" depends="required">
+                <arg key="foodSecurityTest.testDate"/>
+            </field>
+        </form>
+        <!--FoodSecurityTest-END-->
+        <!--NamedTextModule-START-->
+        <form name="namedTextModule">
+            <field property="title" depends="required">
+                <arg key="namedTextModule.title"/>
+            </field>
+            <field property="aliasName" depends="required">
+                <arg key="namedTextModule.aliasName"/>
+            </field>
+        </form>
+        <!--NamedTextModule-END-->
+        <!--CompanyInfoExt-START-->
+        <form name="companyInfoExt">
+            <field property="aliasName" depends="required">
+                <arg key="companyInfoExt.aliasName"/>
+            </field>
+            <field property="companyId" depends="required">
+                <arg key="companyInfoExt.companyId"/>
+            </field>
+        </form>
+        <!--CompanyInfoExt-END-->
+        <!--AdPosition-START-->
+        <form name="adPosition">
+            <field property="positionCode" depends="required">
+                <arg key="adPosition.positionCode"/>
+            </field>
+        </form>
+        <!--AdPosition-END-->
+        <!--AdCast-START-->
+        <form name="adCast">
+            <field property="positionId" depends="required">
+                <arg key="adCast.positionId"/>
+            </field>
+            <field property="castNo" depends="required">
+                <arg key="adCast.castNo"/>
+            </field>
+        </form>
+        <!--AdCast-END-->
+        <!--AdVisit-START-->
+        <form name="adVisit">
+        </form>
+        <!--AdVisit-END-->
+        <!--AdVisitHistory-START-->
+        <form name="adVisitHistory">
+        </form>
+        <!--AdVisitHistory-END-->
+        <!--CategoryProperty-START-->
+        <form name="categoryProperty">
+            <field property="categoryId" depends="required">
+                <arg key="categoryProperty.categoryId"/>
+            </field>
+            <field property="propertyNo" depends="required">
+                <arg key="categoryProperty.propertyNo"/>
+            </field>
+            <field property="propertyName" depends="required">
+                <arg key="categoryProperty.propertyName"/>
+            </field>
+        </form>
+        <!--CategoryProperty-END-->
+        <!--OfferProperty-START-->
+        <form name="offerProperty">
+        </form>
+        <!--OfferProperty-END-->
+        <!--Cart-START-->
+        <form name="cart">
+        </form>
+        <!--Cart-END-->
+        <!--CartProduct-START-->
+        <form name="cartProduct">
+            <field property="cartId" depends="required">
+                <arg key="cartProduct.cartId"/>
+            </field>
+            <field property="productId" depends="required">
+                <arg key="cartProduct.productId"/>
+            </field>
+        </form>
+        <!--CartProduct-END-->
+        <!--GoodsOrder-START-->
+        <form name="goodsOrder">
+            <field property="accountId" depends="required">
+                <arg key="goodsOrder.accountId"/>
+            </field>
+        </form>
+        <!--GoodsOrder-END-->
+        <!--GoodsOrderProduct-START-->
+        <form name="goodsOrderProduct">
+            <field property="orderNo" depends="required">
+                <arg key="goodsOrderProduct.orderNo"/>
+            </field>
+            <field property="productId" depends="required">
+                <arg key="goodsOrderProduct.productId"/>
+            </field>
+        </form>
+
+        <form name="photoServicetype">
+            <field property="name" depends="required">
+                <arg key="photoServicetype.name"/>
+            </field>
+        </form>
+
+        <form name="agentAccount">
+            <field property="accountName" depends="required">
+                <arg key="account.accountName"/>
+            </field>
+            <field property="userName" depends="required">
+                <arg key="account.userName"/>
+            </field>
+        </form>
+
+        <form name="mmExhibition">
+            <field property="title" depends="required">
+                <arg key="mmExhibition.title"/>
+            </field>
+        </form>
+    </formset>
+</form-validation>

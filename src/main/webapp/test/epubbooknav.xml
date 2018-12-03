@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN" "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en-US">
+    <head>
+        <meta name="dtb:uid" content=""/>
+        <meta name="dtb:depth" content="1"/>
+        <meta name="dtb:totalPageCount" content="0"/>
+        <meta name="dtb:maxPageNumber" content="0"/>
+    </head>
+    <docTitle>
+        <text></text>
+    </docTitle>
+    <docAuthor>
+        <text></text>
+    </docAuthor>
+    <navMap>
+        <navPoint id="navPoint-0" playOrder="0">
+            <navLabel>
+                <text>封面</text>
+            </navLabel>
+            <content src="coverpage.html"/>
+        </navPoint>
+        <navPoint id="navPoint-1" playOrder="1">
+            <navLabel>
+                <text>书名页</text>
+            </navLabel>
+            <content src="bookname.html"/>
+        </navPoint>
+        <navPoint id="navPoint-2" playOrder="2">
+            <navLabel>
+                <text>前言</text>
+            </navLabel>
+            <content src="Chapter001.html"/>
+        </navPoint>
+        <navPoint id="navPoint-3" playOrder="3">
+            <navLabel>
+                <text>第一部分 男人是个什么东西？</text>
+            </navLabel>
+            <content src="Chapter002.html"/>
+            <navPoint id="navPoint-4" playOrder="4">
+                <navLabel>
+                    <text>第一章 男人和女人是不同的动物</text>
+                </navLabel>
+                <content src="Chapter003.html"/>
+                <navPoint id="navPoint-5" playOrder="5">
+                    <navLabel>
+                        <text>一 所有的一见钟情都和外貌有关</text>
+                    </navLabel>
+                    <content src="Chapter003.html#sec001"/>
+                </navPoint>
+                <navPoint id="navPoint-6" playOrder="6">
+                    <navLabel>
+                        <text>二 爱情里一定会遇到的一百个问题之一：男人为什么会喜欢你？</text>
+                    </navLabel>
+                    <content src="Chapter003.html#sec002"/>
+                </navPoint>
+                <navPoint id="navPoint-7" playOrder="7">
+                    <navLabel>
+                        <text>三 爱情里一定会遇到的一百个问题之二：为什么有的男人不挑嘴，只要是个女的他就要？</text>
+                    </navLabel>
+                    <content src="Chapter003.html#sec003"/>
+                </navPoint>
+            </navPoint>
+            <navPoint id="navPoint-8" playOrder="8">
+                <navLabel>
+                    <text>第二章 为什么你总是爱上坏男人</text>
+                </navLabel>
+                <content src="Chapter004.html"/>
+                <navPoint id="navPoint-9" playOrder="9">
+                    <navLabel>
+                        <text>一 浪子回头要不要？</text>
+                    </navLabel>
+                    <content src="Chapter004.html#sec001"/>
+                </navPoint>
+                <navPoint id="navPoint-10" playOrder="10">
+                    <navLabel>
+                        <text>二 爱情里一定会遇到的一百个问题之三：男人玩累了真的会收心，从此变成好男人吗？</text>
+                    </navLabel>
+                    <content src="Chapter004.html#sec002"/>
+                </navPoint>
+                <navPoint id="navPoint-11" playOrder="11">
+                    <navLabel>
+                        <text>三 爱情里遇到了坏男人，一定要懂得止损</text>
+                    </navLabel>
+                    <content src="Chapter004.html#sec003"/>
+                </navPoint>
+                <navPoint id="navPoint-12" playOrder="12">
+                    <navLabel>
+                        <text>四 爱情里一定会遇到的一百个问题之四：为什么你总会爱上坏男人？</text>
+                    </navLabel>
+                    <content src="Chapter004.html#sec004"/>
+                </navPoint>
+            </navPoint>
+            <navPoint id="navPoint-13" playOrder="13">
+                <navLabel>
+                    <text>第三章 男人为什么总是出轨</text>
+                </navLabel>
+                <content src="Chapter005.html"/>
+                <navPoint id="navPoint-14" playOrder="14">
+                    <navLabel>
+                        <text>一 男人主动提分手时，态度往往特别坚决</text>
+                    </navLabel>
+                    <content src="Chapter005.html#sec001"/>
+                </navPoint>
+                <navPoint id="navPoint-15" playOrder="15">
+                    <navLabel>
+                        <text>二 爱情里一定会遇到的一百个问题之五：男人为什么要主动提出分手？</text>
+                    </navLabel>
+                    <content src="Chapter005.html#sec002"/>
+                </navPoint>
+                <navPoint id="navPoint-16" playOrder="16">
+                    <navLabel>
+                        <text>三 为什么女人特别顺从，男人还是要出轨？</text>
+                    </navLabel>
+                    <content src="Chapter005.html#sec003"/>
+                </navPoint>
+                <navPoint id="navPoint-17" playOrder="17">
+                    <navLabel>
+                        <text>四 爱情里一定会遇到的一百个问题之六：男人为什么总是出轨？</text>
+                    </navLabel>
+                    <content src="Chapter005.html#sec004"/>
+                </navPoint>
+                <navPoint id="navPoint-18" playOrder="18">
+                    <navLabel>
+                        <text>五 爱情里一定会遇到的一百个问题之七：什么样的男人不会出轨？</text>
+                    </navLabel>
+                    <content src="Chapter005.html#sec005"/>
+                </navPoint>
+            </navPoint>
+            <navPoint id="navPoint-19" playOrder="19">
+                <navLabel>
+                    <text>第四章 怎么挑选好男人</text>
+                </navLabel>
+                <content src="Chapter006.html"/>
+                <navPoint id="navPoint-20" playOrder="20">
+                    <navLabel>
+                        <text>一 选对适合你的人是爱情一切顺利的首要条件</text>
+                    </navLabel>
+                    <content src="Chapter006.html#sec001"/>
+                </navPoint>
+                <navPoint id="navPoint-21" playOrder="21">
+                    <navLabel>
+                        <text>二 爱情里一定会遇到的一百个问题之八：为什么你总是会选错人？</text>
+                    </navLabel>
+                    <content src="Chapter006.html#sec002"/>
+                </navPoint>
+                <navPoint id="navPoint-22" playOrder="22">
+                    <navLabel>
+                        <text>三 爱情里一定会遇到的一百个问题之九：怎么选一个好男人？</text>
+                    </navLabel>
+                    <content src="Chapter006.html#sec003"/>
+                </navPoint>
+                <navPoint id="navPoint-23" playOrder="23">
+                    <navLabel>
+                        <text>四 爱情里一定会遇到的一百个问题之十：在婚恋网站选男人靠谱吗？</text>
+                    </navLabel>
+                    <content src="Chapter006.html#sec004"/>
+                </navPoint>
+            </navPoint>
+        </navPoint>
+        <navPoint id="navPoint-24" playOrder="24">
+        <navLabel>
+            <text>第二部分 爱情是种心理学</text>
+        </navLabel>
+        <content src="Chapter007.html"/>
+        <navPoint id="navPoint-25" playOrder="25">
+            <navLabel>
+                <text>第一章 硬来的爱情没有结果</text>
+            </navLabel>
+            <content src="Chapter008.html"/>
+            <navPoint id="navPoint-26" playOrder="26">
+                <navLabel>
+                    <text>一 异地恋到底靠不靠谱？</text>
+                </navLabel>
+                <content src="Chapter008.html#sec001"/>
+            </navPoint>
+            <navPoint id="navPoint-27" playOrder="27">
+                <navLabel>
+                    <text>二 爱情里一定会遇到的一百个问题之十一：异地恋能不能成功？</text>
+                </navLabel>
+                <content src="Chapter008.html#sec002"/>
+            </navPoint>
+        </navPoint>
+
+    </navMap>
+</ncx>
+
+
+
+

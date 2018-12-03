@@ -1,0 +1,11 @@
+.validError{
+    color: #ff0000;
+    background: url('/scripts/jquery-validation/images/error.png') no-repeat left center;
+    padding-top: 7px;
+    padding-left: 20px;
+}
+.validSuccess{
+    padding-top: 7px;
+    background: url('/scripts/jquery-validation/images/sucess.png') no-repeat left center;
+    padding-left:20px ;
+}

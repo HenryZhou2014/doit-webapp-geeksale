@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="budget-contract" xmlns="http://jbpm.org/4.4/jpdl">
+    <start name="start1">
+        <transition to="申请"/>
+    </start>
+    <task name="申请" assignee="#{owner}">
+        <transition to="项目判断" name="申请"/>
+    </task>
+    <decision name="项目判断">
+        <handler class="com.doit.budget.workflow.BudgetContractDecisionHandlerImpl"/>
+        <transition to="经理审批" name="single"/>
+        <transition to="fork" name="double"/>
+    </decision>
+    <task name="经理审批" assignee="#{manager}">
+        <transition name="pass" to="财务主管审批"/>
+        <transition name="deny" to="驳回"/>
+    </task>
+    <fork name="fork">
+        <transition to="经理1审批"/>
+        <transition to="经理2审批"/>
+    </fork>
+    <task name="经理1审批" assignee="${manager1}">
+        <transition to="join" name="pass"/>
+        <transition to="驳回" name="deny"/>
+    </task>
+    <task name="经理2审批" assignee="${manager2}">
+        <transition to="join" name="pass"/>
+        <transition to="驳回" name="deny"/>
+    </task>
+    <join name="join">
+        <transition to="财务主管审批"/>
+    </join>
+
+    <task name="财务主管审批" assignee="#{treasurer}">
+        <transition name="pass" to="馆长审批"/>
+        <transition name="deny" to="驳回"/>
+    </task>
+
+    <task name="馆长审批" assignee="#{boss}">
+        <transition name="pass" to="end1">
+            <event-listener class="com.doit.budget.workflow.BudgetContractPassEventImpl"/>
+        </transition>
+        <transition name="deny" to="驳回"/>
+    </task>
+
+    <end name="end1"/>
+    <end-cancel name="驳回">
+        <on event="start">
+            <event-listener class="com.doit.budget.workflow.BudgetContractDenialEventListenerImpl"/>
+        </on>
+    </end-cancel>
+</process>
+

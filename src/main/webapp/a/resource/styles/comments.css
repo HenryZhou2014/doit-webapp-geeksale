@@ -1,0 +1,117 @@
+html{
+    font-family:"Microsoft Yahei", "微软雅黑","宋体", "新宋体","黑体", STHeiti;
+}
+
+.areaLine{
+    background: rgba(0, 0, 0, 0) url(./images/line.png) no-repeat scroll center top;
+    height: 9px;
+    margin: 0;
+    overflow: hidden;
+}
+
+#pagelet-hotnews .head::before {
+    background-color: #ed4040;
+    border-radius: 5px;
+    content: "";
+    display: inline-block;
+    float: left;
+    height: 16px;
+    left: 0;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    width: 4px;
+}
+
+#pagelet-hotnews .head {
+    color: #444;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    padding-left: 10px;
+    position: relative;
+}
+
+ul.column-menu-news{
+    /*z-index: 10000;*/
+}
+
+ul.column-menu-news li{
+    font-size: 18px;
+    line-height: 40px;
+    background: lightgrey;
+}
+
+ul.column-menu-news li a{
+    padding: 5px 10px;
+    /*border-radius: 10px;*/
+    display: block;
+    color: #666;
+}
+
+ul.column-menu-news li a:hover{
+    background: lightcoral;
+}
+
+.cat_news_recommend{
+    padding-left: 30px;
+    background: url(images/recommand_channel_aa9f279.png) no-repeat;
+}
+
+.cat_news_hot{
+    padding-left: 30px;
+    background: url(images/hot_channel_5efcb5e.png) no-repeat;
+}
+
+.cat_news_sports{
+    padding-left: 34px;
+    background: url(images/sports_channel_e0d57f8.png) no-repeat;
+}
+
+.cat_news_technology{
+    padding-left: 34px;
+    background: url(images/technology_channel_3207fbd.png) no-repeat;
+}
+
+.cat_news_entertainment{
+    padding-left: 34px;
+    background: url(images/entertainment_channel_00295f6.png) no-repeat;
+}
+
+.highlightedText{
+    color: #CB271B;
+    font-weight: bold;
+}
+
+a.btn{
+    border-width: 1px;
+    border-radius: 0;
+}
+
+.icon-qq{
+    background: url(./simplicity/images/lhs-arts/qq_logo.png) 50% 20% no-repeat;
+}
+
+.icon-weixin{
+    background: url(./simplicity/images/lhs-arts/weixin_logo.png) 50% 20% no-repeat;
+}
+
+.icon-weibo{
+}
+
+ul.relatednews-newslist{
+    margin: 0;
+    padding: 0;
+}
+
+ul.relatednews-newslist li{
+    background: url(../images/line-dot/list-dot-01.jpg) 0 10px no-repeat;
+    padding-left: 10px;
+    margin: 3px 0;
+}
+
+ul.relatednews-newslist li a{
+    color : #444;
+    /*white-space: nowrap;*/
+    text-overflow: ellipsis;
+}

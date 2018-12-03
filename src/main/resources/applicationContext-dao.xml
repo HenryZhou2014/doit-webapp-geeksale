@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd"
+       default-lazy-init="true">
+
+    <!-- For mail settings and future properties files -->
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+        <property name="locations">
+            <list>
+                <value>classpath:jdbc.properties</value>
+                <value>classpath:mail.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+    <bean id="lobHandler" class="org.springframework.jdbc.support.lob.DefaultLobHandler" lazy-init="true"/>
+
+    <!-- Hibernate SessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocations">
+            <list>
+                <value>classpath:hibernate-account.cfg.xml</value>
+                <value>classpath:hibernate-common.cfg.xml</value>
+                <value>classpath:hibernate-cms.cfg.xml</value>
+                <value>classpath:hibernate-bookstore-core.cfg.xml</value>
+               <!-- <value>classpath:hibernate-ecommerce.cfg.xml</value>-->
+                <value>classpath:hibernate-sms.cfg.xml</value>
+            </list>
+        </property>
+        <!--org.hibernate.dialect.Oracle9Dialect  hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect-->
+        <property name="hibernateProperties">
+            <value>
+                hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+                hibernate.query.substitutions=true 'Y', false 'N'
+                hibernate.cache.use_second_level_cache=true
+                hibernate.cache.provider_class=org.hibernate.cache.EhCacheProvider
+                hibernate.search.default.directory_provider=filesystem
+                hibernate.search.default.indexBase=d:\\search-index\\geek-sale-search\\
+                hibernate.jdbc.batch_size=0
+            </value>
+            <!-- Turn batching off for better error messages under PostgreSQL -->
+            <!-- hibernate.jdbc.batch_size=0 hibernate.hbm2ddl.auto=update-->
+        </property>
+    </bean>
+
+    <!-- Transaction manager for a single Hibernate SessionFactory (alternative to JTA) -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!-- JNDI DataSource for J2EE environments -->
+    <!--<jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/appfuse"/>-->
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+
+                <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/geek_sale_db?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>
+        <!--
+    <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+    <property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:orcl"/>
+     -->
+        <!--<property name="url" value="${jdbc.url}"/>-->
+        <!--<property name="url" value="jdbc:oracle:thin:@112.65.233.226:1521:oradata"/>-->
+        <!--<property name="username" value="${jdbc.username}"/>-->
+        <property name="username" value="geek_sale"/>
+        <!--<property name="password" value="${jdbc.password}"/>-->
+        <!--<property name="password" value="{pass:cmxgc}"/>-->
+        <property name="password" value="geek_sale123."/>
+        <!--<property name="password" value="{pass:jd}"/>-->
+        <property name="initialSize" value="10"/>
+        <property name="maxActive" value="50"/>
+        <property name="maxIdle" value="30"/>
+        <property name="maxWait" value="10"/>
+        <property name="poolPreparedStatements" value="true"/>
+        <property name="defaultAutoCommit" value="true"/>
+        <property name="removeAbandoned" value="true"/>
+        <property name="removeAbandonedTimeout" value="60"/>
+        <property name="logAbandoned" value="true"/>
+        <!-- mysql
+        <property name="validationQuery" value="select 1"/>
+        -->
+        <property name="validationQuery" value="select 1  FROM dual"/>
+        <property name="testOnBorrow" value="true"/>
+        <property name="testWhileIdle" value="true"/>
+        <!--<property name=""-->
+    </bean>
+
+    <!--
+    <bean id="dataSource_user" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${jdbc_user.driverClassName}"/>
+        <property name="url" value="${jdbc_user.url}"/>
+        <property name="username" value="${jdbc_user.username}"/>
+        <property name="password" value="${jdbc_user.password}"/>
+        <property name="maxActive" value="${jdbc_user.maxActive}"/>
+        <property name="maxWait" value="${jdbc_user.maxWait}"/>
+        <property name="poolPreparedStatements" value="${jdbc_user.poolPreparedStatements}"/>
+        <property name="defaultAutoCommit" value="${jdbc_user.defaultAutoCommit}"/>
+    </bean>
+     -->
+
+    <!-- Activates scanning of @Autowired -->
+    <!--<context:annotation-config/>
+
+    &lt;!&ndash; Activates scanning of @Repository &ndash;&gt;
+    <context:component-scan base-package="com.doit" use-default-filters="true">
+        <context:include-filter type="regex" expression="com\.doit\.auth\.dao\.hibernate\.*"/>
+        <context:include-filter type="regex" expression="com\.doit\.base\.dao\.hibernate\.*"/>
+        <context:include-filter type="regex" expression="com\.doit\.oa\.dao\.hibernate\.*"/>
+    </context:component-scan>-->
+
+</beans>

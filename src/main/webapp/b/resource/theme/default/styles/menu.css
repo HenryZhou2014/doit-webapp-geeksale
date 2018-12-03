@@ -1,0 +1,52 @@
+#leftMenuBlock{
+    width: 180px;
+    position: absolute;
+    left: 0;
+    top:52px;
+    overflow: hidden;
+    background: #F4F4F4;
+    border-right: 1px solid #D7D7D7;
+    border-bottom: 1px solid #D7D7D7;
+    color: darkgray;
+}
+
+#leftMenuBlock a{
+    color: #666;
+    text-decoration: none;
+}
+
+#contentPanel{
+    margin-left: 183px;
+    padding-left: 15px;
+}
+
+.menuItem{
+    font-size: 12px;
+    padding-left: 25px;
+    line-height: 25px;
+}
+
+.menu .menuItem{
+    padding-left: 25px;
+}
+
+.menuItem:hover{
+    background: #E4E4E4;
+}
+
+.menuTitle{
+    background: #D2D2D2;
+    padding-left: 10px;
+}
+
+.menuTitle a{
+    font-size: 13px;
+    padding: 5px 0;
+    color: #444;
+    display: block;
+}
+
+.menuTitle span{
+    float: right;
+    padding: 5px;
+}

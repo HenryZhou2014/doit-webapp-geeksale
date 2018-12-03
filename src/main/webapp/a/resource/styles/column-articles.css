@@ -1,0 +1,62 @@
+.menu-stickup {
+    margin-top: 40px;
+    position: relative;
+    z-index: 15;
+    /*width: 165px;*/
+}
+
+.article-item-panel {
+    padding-top: 20px;
+}
+
+.article-image {
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.article-image img {
+
+}
+
+.artile-author-items {
+    font-size: 12px;
+}
+
+.article-toolbar-items {
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.article-toolbar-items a {
+    /*color: darkgrey;*/
+}
+
+.article-toolbar-items a:hover {
+    /*color: #666;*/
+}
+
+.article-title {
+
+}
+
+.article-title a {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.article-abstract {
+
+}
+
+.article-item-panel:hover {
+    background: #efefef;
+}
+
+.article-tag {
+    font-size: 14px;
+    background: lightgrey;
+    display: inline-block;
+    padding: 3px 5px;
+    margin-right: 10px;
+}

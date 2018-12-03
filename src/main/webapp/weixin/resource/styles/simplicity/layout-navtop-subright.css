@@ -1,0 +1,43 @@
+/* A CSS Framework by Mike Stenhouse of Content with Style */
+
+@import url(nav-horizontal.css);
+ 
+/* NAV BAR AT THE TOP AND TWO COLUMNS OF CONTENT */
+    div#content {
+        position: relative;
+        width: 960px;
+        margin: 0 auto 20px auto;
+        padding: 0;
+        text-align: left;
+    }
+    div#main {
+        /*float: left;*/
+        /*width: 530px;*/
+        display: block;
+    }
+    div#sub {
+        /*float: left;*/
+        /*width: 145px;*/
+        /*display: inline;*/
+        background: none repeat scroll 0 0 #EEEEEE;
+        border-bottom: 1px solid #DDDDDD;
+        padding-bottom: 10px;
+    }
+        div#sub ul#local {
+            padding: 0;
+            margin: 0;
+            margin-left: 10px;
+        }
+    div#nav {
+        position: absolute;
+        top: 80px;
+        left: 5px;
+        width: 1280px;
+        z-index: 20000;
+        text-align: left;
+    }
+
+    div#nav ul li{
+        z-index: 10000000;
+    }
+/* END CONTENT */

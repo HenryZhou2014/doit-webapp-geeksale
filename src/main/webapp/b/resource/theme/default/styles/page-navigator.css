@@ -1,0 +1,14 @@
+.page_navigator {
+    background: #F4F4F4;
+    line-height: 25px;
+    margin: 10px 0;
+    padding: 0 10px;
+    font-size: 12px;
+    border: 1px solid #E1E1E1;
+    /*border-radius: 3px;*/
+    color: #949494;
+}
+
+.page_navigator a {
+    text-decoration: none;
+}
