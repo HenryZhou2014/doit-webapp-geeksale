@@ -33,6 +33,7 @@
         <pattern>/payment/alipay/*</pattern>
         <pattern>/app/payment/alipay/*</pattern>
         <pattern>/app/ebook*</pattern>
+        <pattern>/htmlEdit.jsp</pattern>
     </excludes>
 
     <!--后台管理-->
