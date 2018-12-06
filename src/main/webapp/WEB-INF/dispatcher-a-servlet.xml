@@ -37,7 +37,7 @@
     <context:component-scan base-package="com.doit.ecommerce.frontend.webapp.controller"/>
     <context:component-scan base-package="com.doit.xiaowanjia.service"/>
     <context:component-scan base-package="com.doit.xiaowanjia.devassistant.webapp.controller"/>
-
+    <context:component-scan base-package="com.doit.htmlEdit.controller"/>
     <!-- Configures the @Controller programming modelMap -->
     <mvc:annotation-driven/>
 

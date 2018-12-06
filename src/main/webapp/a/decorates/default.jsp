@@ -123,7 +123,6 @@
     <div>
         <jsp:include page="/a/common/header.jsp"/>
     </div>
-
     <div>
         <decorator:body/>
     </div>

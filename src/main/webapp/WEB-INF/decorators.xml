@@ -1,10 +1,12 @@
 <decorators defaultdir="/a/decorators">
     <excludes>
+        <pattern>/login</pattern>
         <pattern>/40*.jsp</pattern>
         <pattern>/*ajax=true*</pattern>
         <pattern>/scripts/dojo/*</pattern>
         <pattern>/struts/dojo/*</pattern> 
         <pattern>/resources/*</pattern>
+
         <pattern>/login*</pattern>
         <pattern>/signup*</pattern>
         <pattern>/backend/login*</pattern>
@@ -33,7 +35,17 @@
         <pattern>/payment/alipay/*</pattern>
         <pattern>/app/payment/alipay/*</pattern>
         <pattern>/app/ebook*</pattern>
-        <pattern>/htmlEdit.jsp</pattern>
+        <!--htmlEdit-->
+        <pattern>/*htmlEdit*</pattern>
+        <pattern>*emotion*</pattern>
+        <pattern>/*image.html</pattern>
+        <pattern>/*link.html</pattern>
+        <pattern>/*anchor.html</pattern>
+        <pattern>/*video.html</pattern>
+        <pattern>/*insertframe.html</pattern>
+        <pattern>/*a/resources/**</pattern>
+        <pattern>/*resources/*</pattern>
+        <pattern>/*a/resource/html/dialogs/emotion/emotion.html</pattern>
     </excludes>
 
     <!--后台管理-->
@@ -51,11 +63,11 @@
         <pattern>/app/agent/</pattern>
         <pattern>/app/agent/*</pattern>
     </decorator>
-
     <decorator name="default" page="/a/decorates/default.jsp">
         <pattern>/*</pattern>
         <pattern>/app/*</pattern>
         <pattern>/app</pattern>
         <pattern>/app/</pattern>
     </decorator>
+
 </decorators>

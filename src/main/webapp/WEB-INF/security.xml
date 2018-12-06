@@ -4,12 +4,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
                         http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+    <http security="none" pattern="/htmlEdit.jsp"/>
 
     <http security="none" pattern="/images/**"/>
     <http security="none" pattern="/styles/**"/>
     <http security="none" pattern="/scripts/**"/>
     <http security="none" pattern="/ueditor/**"/>
-
     <http security="none" pattern="/login**"/>
     <http security="none" pattern="/backend/login**"/>
     <http security="none" pattern="/backend/login/**"/>
@@ -30,6 +30,15 @@
     <http security="none" pattern="/app/agent/**"/>
     <http security="none" pattern="/sms/all"/>
     <http security="none" pattern="/usercenter/sms"/>
+
+
+    <http security="none" pattern="/a/resource/html/dialogs/emotion/**"/>
+    <http security="none" pattern="/a/resource/html/**"/>
+    <http security="none" pattern="/a/resource/html/lang/zh-cn/**"/>
+    <http security="none" pattern="/a/resource/html/themes/**"/>
+    <http security="none" pattern="/a/resource/html/third-party/**"/>
+
+
     <!--后台管理-->
     <http pattern="/backend/**" authentication-manager-ref="backendAuthManager" entry-point-ref="loginUrlEntryPoint"
           use-expressions="true">
