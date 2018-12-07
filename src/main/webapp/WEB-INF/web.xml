@@ -247,8 +247,10 @@
             <param-value>true</param-value>
         </init-param>
     </servlet>
+
+    <!--
     <servlet>
-        <!--  a file must named dispatcher-html-servlet.xml -->
+
         <servlet-name>dispatcher-html</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
@@ -261,6 +263,7 @@
         <servlet-name>dispatcher-html</servlet-name>
         <url-pattern>/edit/*</url-pattern>
     </servlet-mapping>
+     -->
     <!--<servlet>
         <servlet-name>CXFServlet</servlet-name>
         <servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>

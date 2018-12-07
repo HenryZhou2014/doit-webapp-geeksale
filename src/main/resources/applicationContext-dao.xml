@@ -30,6 +30,7 @@
                 <value>classpath:hibernate-bookstore-core.cfg.xml</value>
                <!-- <value>classpath:hibernate-ecommerce.cfg.xml</value>-->
                 <value>classpath:hibernate-sms.cfg.xml</value>
+                <value>classpath:hibernate-html.cfg.xml</value>
             </list>
         </property>
         <!--org.hibernate.dialect.Oracle9Dialect  hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect-->

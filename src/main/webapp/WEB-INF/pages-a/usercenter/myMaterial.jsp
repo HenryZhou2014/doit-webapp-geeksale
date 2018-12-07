@@ -50,6 +50,7 @@
                             <div class="form-inline">
                                 <button type="button" class="btn btn-success btn-add"><i class="fa fa-file-text-o"></i>新建文字素材</button>
                                 <button type="button" class="btn btn-success btn-add-image"><i class="fa fa-file-image-o"></i>新建图文素材</button>
+                                <button type="button" class="btn btn-success btn-add-html"><i class="fa fa-file-image-o"></i>新建网页素材</button>
                             </div>
                         </div>
                     </div>
@@ -272,7 +273,13 @@
             var content = "";
             updatePictureMarketingMaterial({id: id, contentType: type, title: title, content: content});
         });
-
+        $(".btn-add-html").click(function () {
+            var id = "";
+            var type = "2";
+            var title = "";
+            var content = "";
+            updateHtmlMaterial({id: id, contentType: type, title: title, content: content});
+        });
         $(document).on("click", ".btn-material-edit", function () {
 
             var materialId = $(this).attr("data-material-id");
@@ -505,6 +512,92 @@
                         });
                     }
                 })
+
+            },
+            buttons: [
+                {
+                    label: '保存',
+                    cssClass: "btn btn-success dialogue-save",
+                    action: function (dialogItself) {
+                        var bootstrapValidator = $("#materialPictureForm").data('bootstrapValidator');
+                        //手动触发验证
+                        bootstrapValidator.validate();
+                        if(! bootstrapValidator.isValid()){
+                            return;
+                        }
+
+                        var formdata = $("#materialPictureForm").serialize();
+                        $.ajax({
+                            type: 'POST',
+                            url: "${ctx}/usercenter/myMaterial/updateMarketingMaterial",
+                            data: formdata,
+                            dataType: "json",
+                            success: function (data) {
+
+                                if (data.flag == "0") {
+                                    toastError("提示", data.msg);
+                                    return;
+                                }
+                                else{
+                                    myDataTable.ajax.reload();
+                                    toastInfo("提示", "素材信息已保存！");
+                                    $(".dialogue-close").click();
+                                }
+                            }
+                        });
+                    }
+                },
+                {
+                    label: '关闭',
+                    cssClass: "btn btn-danger dialogue-close",
+                    action: function (dialogItself) {
+                        dialogItself.close();
+                    }
+                }]
+        });
+    }
+
+
+
+    function updateHtmlMaterial(marketingMaterial){
+
+        var html = template("materialPictureTextTemplate", marketingMaterial);
+        BootstrapDialog.show({
+            title: "<div class='size-20'>新增网页</div>",
+            draggable: true,
+            size: BootstrapDialog.SIZE_WIDE,
+            cssClass: 'introduction-dialogue',
+            message: $("<div></div>").html("addd"),
+            onhidden: function () {
+                console.log("onhidden..");
+            },
+            onshow: function () {
+
+            },
+            onshown: function () {
+                $('#materialPictureForm').bootstrapValidator({
+                    message: 'This value is not valid',
+                    feedbackIcons: {
+                        valid: 'glyphicon glyphicon-ok',
+                        invalid: 'glyphicon glyphicon-remove',
+                        validating: 'glyphicon glyphicon-refresh'
+                    },
+                    fields: {
+                        title: {
+                            message: '标题不能为空',
+                            validators: {
+                                notEmpty: {
+                                    message: '标题不能为空'
+                                }
+                            }
+                        }
+                    }
+                }).on('success.form.bv', function (e) {
+                    // 转换、获取附件列表信息
+
+                });
+
+
 
             },
             buttons: [

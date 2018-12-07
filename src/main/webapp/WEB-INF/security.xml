@@ -37,7 +37,7 @@
     <http security="none" pattern="/a/resource/html/lang/zh-cn/**"/>
     <http security="none" pattern="/a/resource/html/themes/**"/>
     <http security="none" pattern="/a/resource/html/third-party/**"/>
-
+    <http security="none" pattern="/htmlDir/**"/>
 
     <!--后台管理-->
     <http pattern="/backend/**" authentication-manager-ref="backendAuthManager" entry-point-ref="loginUrlEntryPoint"

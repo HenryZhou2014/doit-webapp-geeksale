@@ -36,7 +36,9 @@
         <pattern>/app/payment/alipay/*</pattern>
         <pattern>/app/ebook*</pattern>
         <!--htmlEdit-->
-        <pattern>/*htmlEdit*</pattern>
+        <!--
+        <pattern>/*htmlEdit*</pattern>-->
+        <pattern>/*htmlDir/*</pattern>
         <pattern>*emotion*</pattern>
         <pattern>/*image.html</pattern>
         <pattern>/*link.html</pattern>

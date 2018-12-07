@@ -56,8 +56,8 @@
             <li class="menu-item-module" data-menu-module="0130"><a href="${ctx}/usercenter/commingsoon/"><i class="fa fa-angle-right"></i> 视频裂变</a></li>
             <%--<li><a href="${ctx}/usercenter/yellow-pages"><i class="fa fa-angle-right"></i> 商户库</a></li>--%>
             <li class="menu-item-module" data-menu-module="0140"><a href="${ctx}/usercenter/commingsoon/"><i class="fa fa-angle-right"></i> 增值服务</a></li>
-            <li class="menu-item-module" data-menu-module="0160"><a href="${ctx}/edit/htmlEdit"><i class="fa fa-angle-right"></i> 编辑网页</a></li>
-            <li class="menu-item-module" data-menu-module="0170"><a href="${ctx}/edit/showAll"><i class="fa fa-angle-right"></i> 查看网页</a></li>
+            <li class="menu-item-module" data-menu-module="0160"><a href="${ctx}/usercenter/htmlEdit"><i class="fa fa-angle-right"></i> 编辑网页</a></li>
+            <li class="menu-item-module" data-menu-module="0170"><a href="${ctx}/usercenter/showAll"><i class="fa fa-angle-right"></i> 查看网页</a></li>
 
             <li class="menu-item-module" data-menu-module="0150"><a href="${ctx}/usercenter/commingsoon"><i class="fa fa-plus"></i> 添加功能</a></li>
         </ul>

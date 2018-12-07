@@ -3,9 +3,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html>
+
 <head>
     <title>页面在线编辑</title>
     <!-- 加载编辑器的容器 -->
@@ -21,61 +21,87 @@
     <script type="text/javascript" charset="utf-8" src="${ctx}/a/resource/html/third-party/jquery-1.10.2.js"></script>
 
     <script type="text/javascript">
-    function getAllHtml() {
-        alert(UE.getEditor('editor').getAllHtml())
-    }
-</script>
-
-<style type="text/css">
-    div{
-        width:100%;
-    }
-</style>
-</head>
-
-<body >
-<div>
-    <script id="editor" type="text/plain" style="width:1024px;height:400px;"></script>
-</div>
-
-<input type="button"  onclick="saveHtml()" name="获得整个html的内容" value="获得整个html的内容"/>
-
-<!-- 实例化编辑器 -->
-<script type="text/javascript">
-//实例化编辑器
-//建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
-var ue = UE.getEditor('editor');
-function getAllHtml() {
-    return UE.getEditor('editor').getAllHtml();
-}
-
-function saveHtml() {
-    var htmlValue = getAllHtml();
-    var result = Base64.encode(HTMLEncode(htmlValue));
-    alert(result);
-    var dataStr ="&htmlValue="+result;
-    $.ajax({
-        type: "POST",
-        url: "/usercenter/uploadHtml",
-        data: dataStr,
-        dataType: "json",
-        success: function(data){
-            alert("SUCCESS"+data);
+        function clearHtml() {
+            UE.getEditor('editor').setContent("",false,"");
+        }
+        function getAllHtml() {
+            return UE.getEditor('editor').getAllHtml();
         }
 
-    });
-}
-//HTML转义
-function HTMLEncode(html) {
-    var temp = document.createElement("div");
-    (temp.textContent != null) ? (temp.textContent = html) : (temp.innerText = html);
-    var output = temp.innerHTML;
-    temp = null;
-    return output;
-}
 
-</script>
+        function saveHtml() {
+            var htmlValue = getAllHtml();
+            var result = Base64.encode(HTMLEncode(htmlValue));
+            var dataStr ="&htmlValue="+result+"&name="+prompt("请输入你的名字","默认网页名称");
+            $.ajax({
+                type: "POST",
+                url: "/usercenter/uploadHtml",
+                data: dataStr,
+                dataType: "json",
+                success:function(data){
+                    clearHtml();
+                    alert("保存成功");
+                },
+                error:function(data){
+                    alert("系统错误");
+                }
+
+            });
+        }
+        //HTML转义
+        function HTMLEncode(html) {
+            var temp = document.createElement("div");
+            (temp.textContent != null) ? (temp.textContent = html) : (temp.innerText = html);
+            var output = temp.innerHTML;
+            temp = null;
+            return output;
+        }
+    </script>
+
+    <style type="text/css">
+        div{
+            width:100%;
+        }
+    </style>
+</head>
 
 
-</body>
-</html>
+
+<section>
+    <div class="container">
+
+        <!-- RIGHT -->
+        <div class="col-lg-10 col-md-10 col-sm-9 col-lg-push-2 col-md-push-2 col-sm-push-3 margin-bottom-80">
+
+            <div class="callout alert alert-info noborder margin-top-60 margin-bottom-60">
+
+                <div class="text-center">
+
+
+
+                    <div>
+                        <script id="editor" type="text/plain" style="width:100%;height:400px;"></script>
+                        </div>
+
+
+                        <!-- 实例化编辑器 -->
+                        <script type="text/javascript">
+                        //实例化编辑器
+                        //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+                        var ue = UE.getEditor('editor');
+
+
+                        </script>
+                    </div>
+                    <input type="button"  onclick="saveHtml()" name="保存" value="保存" sytle="margin:2px;"/>
+            </div>
+
+        </div>
+        <!-- LEFT -->
+        <div class="col-lg-2 col-md-2 col-sm-3 col-lg-pull-10 col-md-pull-10 col-sm-pull-7">
+            <jsp:include page="/app/usercenter/userCenterMenu"/>
+        </div>
+
+    </div>
+</section>
+

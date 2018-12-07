@@ -26,6 +26,7 @@
         <from>/ueditor/**</from>
         <to>/ueditor/$1</to>
     </rule>
+
     <rule>
         <from>/edit/**</from>
         <to>/edit/$1</to>
@@ -102,7 +103,17 @@
         <to>/backend/logout</to>
     </rule>-->
 
-    <!-- Spring MVC -->
+    <rule>
+        <from>/htmlDir/**</from>
+        <to>/htmlDir/$1</to>
+    </rule>
+    <!--
+        <rule>
+            <from>/app/htmlDir/**</from>
+            <to>/htmlDir/$1</to>
+        </rule>
+     -->
+        <!-- Spring MVC -->
     <rule>
         <from>/**</from>
         <to>/app/$1</to>
