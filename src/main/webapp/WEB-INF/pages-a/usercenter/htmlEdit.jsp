@@ -5,7 +5,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-
+<html>
 <head>
     <title>页面在线编辑</title>
     <!-- 加载编辑器的容器 -->
@@ -56,6 +56,9 @@
             temp = null;
             return output;
         }
+
+        var ue = UE.getEditor('editor');
+
     </script>
 
     <style type="text/css">
@@ -67,34 +70,17 @@
 
 
 
-<section>
-    <div class="container">
+<body>
 
-        <!-- RIGHT -->
-        <div class="col-lg-10 col-md-10 col-sm-9 col-lg-push-2 col-md-push-2 col-sm-push-3 margin-bottom-80">
-
-            <div class="callout alert alert-info noborder margin-top-60 margin-bottom-60">
-
-                <div class="text-center">
-
-
-
-                    <div>
-                        <script id="editor" type="text/plain" style="width:100%;height:400px;"></script>
-                        //实例化编辑器
-                        //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
-                        var ue = UE.getEditor('editor');
-                        </script>
-                    </div>
-                    <input type="button"  onclick="saveHtml()" name="保存" value="保存" sytle="margin:2px;"/>
-            </div>
-
-        </div>
-        <!-- LEFT -->
-        <div class="col-lg-2 col-md-2 col-sm-3 col-lg-pull-10 col-md-pull-10 col-sm-pull-7">
-            <jsp:include page="/app/usercenter/userCenterMenu"/>
-        </div>
-
+    <div>
+        <script id="editor" type="text/plain" style="width:100%;height:400px;"></script>
+        </script>
     </div>
-</section>
+    <br>
+    <center>
+    <input type="button" class="btn btn-success dialogue-save" onclick="saveHtml()" name="保存" value="保存" sytle="margin:2px;"/>
+    </center>
+
+</body>
+</html>
 
